@@ -1,4 +1,5 @@
-# recherche-plattform
+# re:form
+— Die Recherche Plattform für investigative Journalist:innen
 
 ## Project setup
 ```

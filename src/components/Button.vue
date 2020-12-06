@@ -1,5 +1,5 @@
 <template>
-  <a href="/Hypothese" role="button">
+  <a class="button" role="button" :class="type">
     <span v-if="icon"> + </span>
     <slot></slot>
   </a>
@@ -8,23 +8,35 @@
 <script>
 export default {
   name: "Button",
-  data() {
-    return {
-      icon: true,
-    };
+  props: {
+    type: {
+      type: String,
+    },
+    icon: {
+      type: Boolean,
+      default: false,
+    },
   },
 };
 </script>
 
 <style scoped>
-a {
-  background: #c4e286;
-  border-radius: 2em;
-  padding: 1rem;
-  text-decoration: none;
-  color: black;
-  border: none;
-  min-width: 2em;
-  height: 2em;
+.button {
+  font-size: 1em;
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin: 0.5em;
+  border-radius: 1em;
+  cursor: pointer;
+}
+.button:first-of-type {
+  margin-left: 0;
+}
+.primary {
+  background-color: rgba(255, 244, 201, 0.8);
+  font-weight: 500;
+}
+.secondary {
+  background-color: rgba(255, 244, 201, 0.4);
 }
 </style>

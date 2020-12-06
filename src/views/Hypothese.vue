@@ -9,7 +9,11 @@
       Hast du bereits eine konkrete Idee oder soll dir mit Fragen auf die
       Sprünge geholfen werden?
     </p>
-    <Textarea value="Beispiel" width="60%" height="auto" />
+    <Textarea width="60%" height="auto">
+      Formuliere eine Hypothese.\n Stimmt es, dass …? Wie kann das sein? Was
+      sind die Folgen? Was wird dagegen getan?\n Hast du bereits eine konkrete
+      Idee oder soll dir mit Fragen auf die Sprünge geholfen werden?
+    </Textarea>
   </main>
 </template>
 

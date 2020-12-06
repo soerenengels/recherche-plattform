@@ -3,9 +3,9 @@
     <Title>Neue Story erstellen</Title>
   </header>
   <main>
-    <p v-if="!stories">
+    <p v-if="true">
       Let's start the story!
-      <router-link to="/3/hypothese" replace><Button type="add" /></router-link>
+      <Button @click="createNewStory()" type="add" />
     </p>
   </main>
 </template>
@@ -24,6 +24,13 @@ export default {
       },
       stories: false,
     };
+  },
+  methods: {
+    createNewStory() {
+      const storyId = 0;
+      console.log("Create a New Story with the Story-ID: " + storyId);
+      this.$router.push({ path: `/${storyId}/hypothese` });
+    },
   },
   components: {
     Title,

@@ -17,7 +17,7 @@
           <td>{{ item.actor }}</td>
           <td>{{ item.published }}</td>
           <td>
-            <ul>
+            <ul class="tags">
               <li v-for="tag in item.tags" :key="tag">
                 <span :style="'background-color: ' + tag.color">{{
                   tag.value
@@ -77,5 +77,13 @@ tbody tr:hover {
   background-color: rgba(255, 244, 201, 0.4);
   transition: background-color 0.3s ease-out;
   border-radius: 1em;
+}
+.tags {
+  list-style-type: none;
+}
+.tags span {
+  border-radius: 1em;
+  padding: 0.5em;
+  cursor: pointer;
 }
 </style>

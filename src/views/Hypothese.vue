@@ -7,17 +7,19 @@
         <textarea width="60%" height="auto" v-model="hypothesis"></textarea>
         <!-- <Textarea  v-model="hypothesis"> </Textarea> -->
       </section>
-      <aside>
-        <p>
-          Formuliere eine <strong>Hypothese</strong>:
-          <em
-            >Stimmt es, dass …? Wie kann das sein? Was sind die Folgen? Was wird
-            dagegen getan?</em
-          ><br />
-          Hast du bereits eine konkrete Idee oder soll dir mit Fragen auf die
-          Sprünge geholfen werden?
-        </p>
-      </aside>
+      <transition appear>
+        <aside>
+          <p>
+            Formuliere eine <strong>Hypothese</strong>:
+            <em
+              >Stimmt es, dass …? Wie kann das sein? Was sind die Folgen? Was
+              wird dagegen getan?</em
+            ><br />
+            Hast du bereits eine konkrete Idee oder soll dir mit Fragen auf die
+            Sprünge geholfen werden?
+          </p>
+        </aside>
+      </transition>
     </div>
   </main>
 </template>

@@ -14,6 +14,7 @@ Anzahl der mit diesem Nebenprojekt verbrachte Nächte: 3
 - Chronik: Buttons richtige Funktion zuweisen
 - Quellen: Tabelle stylen
 - Quellen: Tabelle responsive machen
+- File: Toggle-Button einbauen zum umschalten zwischen Markdown und visueller Ansicht
 - File: Zum Markdown-Editor machen
 - File: im Aside Outline anzeigen
 - File: im Aside Ereignisse anzeigen
@@ -45,6 +46,10 @@ title: String
 content: String
 date: Datum
 actors: Array, Liste von Akteur:innen
+
+## Assets
+
+Icon inspiriert an: https://icon-library.com/icon/search-icon-free-29.html
 
 ## Kickstart
 

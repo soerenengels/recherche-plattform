@@ -46,4 +46,15 @@ a {
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
+/* Transitions */
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 1s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
 </style>

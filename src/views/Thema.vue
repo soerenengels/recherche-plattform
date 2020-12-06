@@ -31,7 +31,7 @@
             <td>{{ item.actor }}</td>
             <td>{{ item.published }}</td>
             <td>
-              <ul>
+              <ul class="tags">
                 <li v-for="tag in item.tags" :key="tag">
                   <span :style="'background-color: ' + tag.color">{{
                     tag.value
@@ -87,7 +87,7 @@ export default {
           tags: [
             {
               value: "Studierende",
-              color: "blue",
+              color: "lightblue",
             },
           ],
           files: "test.pdf",

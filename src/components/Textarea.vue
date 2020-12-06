@@ -1,6 +1,7 @@
 <template>
   <textarea v-model="currentValue" :height="height" :width="width"> </textarea>
 </template>
+
 <script>
 /* Functionality via https://liamhammett.com/textarea-slots-in-vue-components-DqzaN6o4 */
 export default {
@@ -10,6 +11,8 @@ export default {
       type: String,
       default: "Hier Text einfügen ...",
     },
+    width: String,
+    height: String,
   },
   data() {
     return {
@@ -32,8 +35,9 @@ export default {
 textarea {
   background: #fff4c9;
   border-radius: 2rem;
+  width: calc(100% - 3em);
+  min-height: 100%;
   padding: 1.5rem;
-  margin: 1rem 0;
   font-size: 2rem;
   border: none;
   font-family: inherit;

@@ -7,18 +7,18 @@
         <em>Get a Documents State of Mind.</em>
       </p>
     </header>
-    <aside>
+    <!-- <aside>
       <Button type="primary" icon="true">Mögliche Quelle hinzufügen</Button>
       <input type="search" value="Suche" />
-    </aside>
-    <Tabelle :structure="structure" :dataSrc="data" />
+    </aside> -->
+    <TabelleQuellen :structure="structure" :dataSrc="data" />
   </main>
 </template>
 
 <script>
 import Navigation from "@/components/Navigation.vue";
-import Tabelle from "@/components/Tabelle.vue";
-import Button from "@/components/Button.vue";
+import TabelleQuellen from "@/components/TabelleQuellen.vue";
+/* import Button from "@/components/Button.vue"; */
 
 export default {
   name: "Quellen",
@@ -31,23 +31,35 @@ export default {
         { value: "Interviews", type: "text" },
         { value: "Vertrauliche Dokumente", type: "text" },
       ],
-      data: [
-        {
-          title: "Hypothese",
-          class: "prob",
-          content:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, autem ad! Voluptatum possimus est, architecto nemo, soluta natus ex in commodi quos asperiores eveniet neque reiciendis officia perferendis deserunt porro.",
-          date: 20200106,
-          actors: [],
-        },
-      ],
+      /* data: [
+        [
+          {
+            title: "Hypothese",
+            class: "prob",
+            content:
+              "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, autem ad! Voluptatum possimus est, architecto nemo, soluta natus ex in commodi quos asperiores eveniet neque reiciendis officia perferendis deserunt porro.",
+            date: 20200106,
+            actors: [],
+          },
+        ],
+      ], */
     };
   },
   props: {},
+  computed: {
+    getEvents() {
+      return this.$store.getters.getEvents;
+    },
+    data() {
+      const data = [];
+      this.getEvents.forEach((event) => data.push([event, "", "", "", ""]));
+      return data;
+    },
+  },
   components: {
     Navigation,
-    Tabelle,
-    Button,
+    TabelleQuellen,
+    /* Button, */
   },
 };
 </script>

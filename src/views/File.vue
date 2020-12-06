@@ -1,7 +1,7 @@
 <template>
   <Navigation />
   <main>
-    <article>
+    <article contenteditable>
       <!-- <Editor /> -->
       <h1>File</h1>
       <p>

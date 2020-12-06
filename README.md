@@ -4,20 +4,14 @@
 
 Die Rechercheplattform **re:form** basiert auf dem Ansatz der _story-based inquireries_ von Mark Lee Hunter und Luuk Sengers.
 
-Anzahl der mit diesem Nebenprojekt verbrachte Nächte: 2
+Anzahl der mit diesem Nebenprojekt verbrachte Nächte: 3
 
 ## To Do
 
 - Menü: Aktiven Link bei kleinen Bildschirmen in Viewport scrollen
 - Hypothese: Konkrete Anleitung zum Schreiben einer Hypothese verfassen
 - Hypothese: Freitextfeld für das Verfassen einer Hypothese einfügen
-- ~Components: Button: Primary, Secondary, Tertiary anlegen + +Icon~
-- Chronik: Buttons Funktion zuweisen
-- Chronik: Sortierungs-Funktion (Dramaturgisch, Chronologisch) anlegen
-- Chronik: Datenstruktur für Ereignisse anlegen (id, partOf, title, description, date, actors)
-- Chronik: Vier Bereiche aufspannen
-- Chronik: Ereignisse in ihren zugeordneten Bereichen anzeigen
-- Quellen: Alle Ereignisse in Tabelle anzeigen
+- Chronik: Buttons richtige Funktion zuweisen
 - Quellen: Tabelle stylen
 - Quellen: Tabelle responsive machen
 - File: Zum Markdown-Editor machen
@@ -29,6 +23,28 @@ Anzahl der mit diesem Nebenprojekt verbrachte Nächte: 2
 - Thema: Funktion für das Hinzufügen eines neuen Artikels
 - Kontakte: Social Media richtig anzeigen
 
+### Done
+
+- Chronik: Vier Bereiche aufspannen
+- Chronik: Ereignisse in ihren zugeordneten Bereichen anzeigen
+- Chronik: Ereignisse klappbar machen
+- Chronik: Datenstruktur für Ereignisse anlegen (id, type, title, description, date, actors) -> Dokumentiert in README.md
+- Chronik: Buttons Basis-Funktion zuweisen
+- Quellen: Alle Ereignisse in Tabelle anzeigen
+- Components: Button: Primary, Secondary, Tertiary anlegen + +Icon
+
+## Chronik
+
+Hier werden Ereignisse angelegt.
+
+### Datenstruktur: event
+
+id: Number, beginnt mit 0, aufsteigend
+type: String, Optionen: [prob, cons, reas, solu]
+title: String
+content: String
+date: Datum
+actors: Array, Liste von Akteur:innen
 
 ## Kickstart
 

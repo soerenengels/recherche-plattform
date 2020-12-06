@@ -30,21 +30,10 @@ a {
   font-size: 2em;
 }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
 a {
   text-decoration: none;
   border: none;
   color: black;
-}
-#nav a.router-link-exact-active {
-  color: #42b983;
 }
 
 /* Transitions */

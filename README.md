@@ -22,6 +22,10 @@ Anzahl der mit diesem Nebenprojekt verbrachte Nächte: 3
 - File: im Aside (abgeklopfte) Quellen anzeigen
 - Thema: Tabelle als Komponente
 - Thema: Funktion für das Hinzufügen eines neuen Artikels
+- Transkriptions-API einbinden
+- state stabil lokal oder in Datenbank speichern
+- Authentifizierung hinzufügen
+- Kollaboratives bearbeiten ermöglichen
 - Kontakte: Social Media richtig anzeigen
 
 ### Done
@@ -37,6 +41,15 @@ Anzahl der mit diesem Nebenprojekt verbrachte Nächte: 3
 ## Chronik
 
 Hier werden Ereignisse angelegt.
+
+## Tags
+
+- prop: tagsArray
+- takes an Array with tag-objects
+
+Tag-Objekt-Attribute:
+value: String
+backgroundColor: String -> Farbwert wird an style-Attribut gebunden
 
 ### Datenstruktur: event
 

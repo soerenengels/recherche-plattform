@@ -11,7 +11,7 @@
       <tbody>
         <tr v-for="row in dataSrc" :key="row">
           <template v-for="cell in row" :key="cell">
-            <td v-if="typeof cell == 'object'">
+            <td v-if="cell.type == 'prob'">
               <Event :eventObject="cell" />
             </td>
             <td v-else>{{ cell }}</td>

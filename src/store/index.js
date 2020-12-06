@@ -24,6 +24,56 @@ const initialState = {
     date: 20200106,
     actors: [],
   }],
+  topicCollection: [
+    {
+      url: "https://www.url.de/",
+      title: "Titel",
+      author: "Autor:in",
+      description: "Beschreibung des Inhaltes die da Lorem ipsum wäre.",
+      actor: [
+        {
+          value: "Sören",
+          backgroundColor: "lightblue",
+        },
+      ],
+      published: 20201204,
+      tags: [
+        {
+          value: "Studierende",
+          backgroundColor: "lightblue",
+        },
+        {
+          value: "Cooler Typ",
+          backgroundColor: "red",
+        },
+      ],
+      files: "test.pdf",
+    },
+    {
+      url: "https://www.this-is-an-url.de/",
+      title: "This is an URL",
+      author: "Autor:in",
+      description: "Beschreibung des Inhaltes die da Lorem ipsum wäre.",
+      actor: [
+        {
+          value: "Elefant",
+          backgroundColor: "lightblue",
+        },
+      ],
+      published: 20201204,
+      tags: [
+        {
+          value: "Studierende",
+          backgroundColor: "lightblue",
+        },
+        {
+          value: "Cooler Typ",
+          backgroundColor: "red",
+        },
+      ],
+      files: "test.pdf",
+    },
+  ],
 }
 export default createStore({
   state: initialState,
@@ -33,6 +83,9 @@ export default createStore({
     },
     getHypothesis(state) {
       return state.hypothesis;
+    },
+    getTopicCollection(state) {
+      return state.topicCollection;
     }
   },
   setter: {

@@ -58,21 +58,30 @@ export default {
 <style scoped>
 nav {
   width: 100%;
+  margin-bottom: 0.5rem;
+  height: 3rem;
 }
 ul {
   display: flex;
-  margin-bottom: 1rem;
-  overflow: scroll;
+  overflow-y: scroll;
+  height: 100%;
 }
 li {
   padding-right: 1em;
   list-style-type: none;
-  font-size: 1em;
 }
 a {
+  font-size: 2em;
   font-weight: 400;
+  padding: 0;
 }
+
 .router-link-active {
   font-weight: bold;
+  border-bottom: 0.1em solid black;
+}
+a:hover {
+  border-bottom: 0.1em solid black;
+  transition: border-bottom 0.3s ease;
 }
 </style>

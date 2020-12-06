@@ -14,16 +14,13 @@
           <td>{{ item.title }}</td>
           <td>{{ item.author }}</td>
           <td>{{ item.description }}</td>
-          <td>{{ item.actor }}</td>
+          <td>
+            <Tags :tagsArray="item.actor" />
+          </td>
+
           <td>{{ item.published }}</td>
           <td>
-            <ul class="tags">
-              <li v-for="tag in item.tags" :key="tag">
-                <span :style="'background-color: ' + tag.color">{{
-                  tag.value
-                }}</span>
-              </li>
-            </ul>
+            <Tags :tagsArray="item.tags" />
           </td>
           <td>{{ item.files }}</td>
         </tr>
@@ -43,6 +40,8 @@
 </template>
 
 <script>
+import Tags from "@/components/Tags.vue";
+
 export default {
   name: "Tabelle",
   props: {
@@ -53,7 +52,9 @@ export default {
       default: true,
     },
   },
-  components: {},
+  components: {
+    Tags,
+  },
 };
 </script>
 
@@ -64,6 +65,9 @@ div {
 table {
   table-layout: auto;
   border-collapse: collapse;
+}
+td {
+  vertical-align: top;
 }
 thead td {
   padding: 0.2em;

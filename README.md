@@ -8,16 +8,17 @@ Anzahl der mit diesem Nebenprojekt verbrachte Nächte: 3
 
 ## To Do
 
-- Hypothese: Konkrete Anleitung zum Schreiben einer Hypothese verfassen
-- Hypothese: Freitextfeld für das Verfassen einer Hypothese einfügen
-- Chronik: Buttons richtige Funktion zuweisen
+- responsive Anpassung der LayoutTwoThirds-Komponente
+- responsive Anpassung der EventsCard-Komponente
+- Verbesserung der responsive-Anpassung der Navigation-Komponente
+- Chronik: Verbesserung des Bindings von Event-Komponente & State
+- Quellen: Anpassung der Schrift im Kontext-Bereich
+- File: aside bei kleinen Bildschirmen anpassen
+- Thema: Tabellenzellen mehr Funktionen entsprechend Kontext geben(z.B. bei URL)
 - Quellen: Tabelle stylen
 - Quellen: Tabelle responsive machen
 - File: Toggle-Button einbauen zum umschalten zwischen Markdown und visueller Ansicht
 - File: Zum Markdown-Editor machen
-- File: im Aside Outline anzeigen
-- File: im Aside Ereignisse anzeigen
-- File: im Aside Hypothese anzeigen
 - File: im Aside (abgeklopfte) Quellen anzeigen
 - Thema: Tabelle als Komponente
 - Thema: Funktion für das Hinzufügen eines neuen Artikels
@@ -37,6 +38,12 @@ Anzahl der mit diesem Nebenprojekt verbrachte Nächte: 3
 - Chronik: Buttons Basis-Funktion zuweisen
 - Quellen: Alle Ereignisse in Tabelle anzeigen
 - Components: Button: Primary, Secondary, Tertiary anlegen + +Icon
+- Hypothese: Konkrete Anleitung zum Schreiben einer Hypothese verfassen
+- Hypothese: Freitextfeld für das Verfassen einer Hypothese einfügen
+- Chronik: Buttons richtige Funktion zuweisen
+- File: im Aside Outline anzeigen
+- File: im Aside Ereignisse anzeigen
+- File: im Aside Hypothese anzeigen
 
 ## Chronik
 

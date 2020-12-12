@@ -1,95 +1,62 @@
 <template>
   <Navigation />
   <main>
-    <article contenteditable>
-      <!-- <Editor /> -->
-      <h1>File</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sit quasi
-        soluta tempora, eligendi molestias, blanditiis quas incidunt voluptatem
-        ipsum fugit hic impedit beatae accusamus nemo id perferendis quia
-        deleniti.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sit quasi
-        soluta tempora, eligendi molestias, blanditiis quas incidunt voluptatem
-        ipsum fugit hic impedit beatae accusamus nemo id perferendis quia
-        deleniti.
-      </p>
-      <h2>Zwischenüberschrift</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sit quasi
-        soluta tempora, eligendi molestias, blanditiis quas incidunt voluptatem
-        ipsum fugit hic impedit beatae accusamus nemo id perferendis quia
-        deleniti.
-      </p>
-      <h2>Ereignis</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sit quasi
-        soluta tempora, eligendi molestias, blanditiis quas incidunt voluptatem
-        ipsum fugit hic impedit beatae accusamus nemo id perferendis quia
-        deleniti.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sit quasi
-        soluta tempora, eligendi molestias, blanditiis quas incidunt voluptatem
-        ipsum fugit hic impedit beatae accusamus nemo id perferendis quia
-        deleniti.
-      </p>
-    </article>
-    <aside>
-      <section>
-        <h2>Inhaltsverzeichnis</h2>
-        <ul>
-          <li>File</li>
-          <li>
-            <ul>
-              <li>Zwischenüberschrift</li>
-              <li>Ereignis</li>
-            </ul>
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h2>Ereignisse</h2>
-      </section>
-    </aside>
+    <LayoutTwoThirds>
+      <template v-slot:main>
+        <BlockEditor :dataArray="dataFile" />
+      </template>
+      <template v-slot:context>
+        <div class="sidebar">
+          <Button type="primary">Toggle Markdown-Editor</Button>
+          <BlockToC />
+          <section>
+            <h2>Ereignisse</h2>
+            <template v-for="event in dataEvents" :key="event.id">
+              <Event darkBackground closed :eventObject="event" />
+            </template>
+          </section>
+          <section>
+            <h2>Quellen</h2>
+          </section>
+        </div>
+      </template>
+    </LayoutTwoThirds>
   </main>
 </template>
 
 <script>
 import Navigation from "@/components/Navigation.vue";
-/* import Editor from "@/components/Editor.vue"; */
-/* import Button from "@/components/Button.vue"; */
+import LayoutTwoThirds from "@/components/LayoutTwoThirds.vue";
+import BlockEditor from "@/components/BlockEditor.vue";
+import BlockToC from "@/components/BlockToC.vue";
+import Button from "@/components/Button.vue";
+import Event from "@/components/Event.vue";
 
 export default {
-  name: "Kontakte",
-  data() {},
-  methods: {},
+  name: "File",
+  computed: {
+    dataFile() {
+      return this.$store.state.file;
+    },
+    dataEvents() {
+      return this.$store.state.events;
+    },
+  },
   props: {},
   components: {
     Navigation,
-    /* Editor, */
-    /* Button, */
+    LayoutTwoThirds,
+    BlockEditor,
+    BlockToC,
+    Button,
+    Event,
   },
 };
 </script>
 
 <style scoped>
-main {
-  display: flex;
-}
-article {
-  flex: 50% 2;
-  padding-right: 2em;
-}
-aside {
-  flex: 25% 1;
-}
-aside ul {
-  list-style-type: none;
-}
-aside ul ul {
-  padding-left: 1em;
+.sidebar {
+  position: sticky;
+  top: 0;
 }
 </style>

@@ -11,21 +11,21 @@
       <tbody>
         <tr v-for="row in dataSrc" :key="row">
           <template v-for="cell in row" :key="cell">
-            <td v-if="cell.type == 'prob'">
-              <Event :eventObject="cell" />
+            <td
+              v-if="
+                (cell.type == 'prob') |
+                  (cell.type == 'cons') |
+                  (cell.type == 'reas') |
+                  (cell.type == 'solu')
+              "
+            >
+              <Event darkBackground :eventObject="cell" />
+            </td>
+            <td v-else-if="cell == ''">
+              <Button type="secondary">Quelle eintragen</Button>
             </td>
             <td v-else>{{ cell }}</td>
           </template>
-        </tr>
-        <tr class="newline" v-if="newLine">
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
         </tr>
       </tbody>
     </table>
@@ -34,9 +34,10 @@
 
 <script>
 import Event from "@/components/Event.vue";
+import Button from "./Button.vue";
 
 export default {
-  name: "Tabelle",
+  name: "TabelleQuellen",
   props: {
     dataSrc: Array,
     structure: Array,
@@ -45,7 +46,10 @@ export default {
       default: true,
     },
   },
-  components: { Event },
+  components: {
+    Event,
+    Button,
+  },
 };
 </script>
 

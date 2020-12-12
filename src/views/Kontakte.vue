@@ -2,121 +2,58 @@
   <Navigation />
   <main>
     <header>
-      <Button type="primary" icon="true">Kontakt hinzufügen</Button>
+      <Button type="primary" icon="true" @click="addContact()"
+        >Kontakt hinzufügen</Button
+      >
       <Button type="secondary">Filter</Button>
       <input type="search" value="Suche" />
     </header>
-    <div>
-      <table>
-        <thead>
-          <tr>
-            <td class="fixedColumn">Nachname</td>
-            <td>Vorname</td>
-            <td>Geschlechtsidentität</td>
-            <td>Anrede</td>
-            <td>Codename / Spitzname</td>
-            <td>Kontext / Gruppe</td>
-            <td>E-Mail</td>
-            <td>Telefon</td>
-            <td>Social Media</td>
-            <td>Stadt</td>
-            <td>PLZ</td>
-            <td>Straße</td>
-            <td>Hausnummer</td>
-            <td>Adresszusatz</td>
-            <td>Notizen</td>
-            <td>Sichtbarkeit</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="contact in contacts" :key="contact.id">
-            <td>{{ contact.lastName }}</td>
-            <td>{{ contact.firstName }}</td>
-            <td>{{ contact.gender }}</td>
-            <td>{{ contact.salutation }}</td>
-            <td>{{ contact.nickname }}</td>
-            <td>
-              <span v-for="group in contact.context" :key="group">
-                {{ group }}
-              </span>
-            </td>
-            <td>{{ contact.email }}</td>
-            <td>{{ contact.phone }}</td>
-            <td>{{ contact.socialMedia }}</td>
-            <td>{{ contact.city }}</td>
-            <td>{{ contact.postcode }}</td>
-            <td>{{ contact.street }}</td>
-            <td>{{ contact.houseNumber }}</td>
-            <td>{{ contact.adressContext }}</td>
-            <td>{{ contact.description }}</td>
-            <td>{{ contact.access }}</td>
-            <td>{{ contact.imageUrl }}</td>
-          </tr>
-          <tr class="newline">
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <TabelleKontakte :structure="dataStructure" :dataSrc="contacts" />
   </main>
 </template>
 
 <script>
 import Navigation from "@/components/Navigation.vue";
 import Button from "@/components/Button.vue";
+import TabelleKontakte from "../components/TabelleKontakte.vue";
 
 export default {
   name: "Kontakte",
   data() {
     return {
-      contacts: [
-        {
-          lastName: "Engels",
-          firstName: "Sören",
-          gender: "cis-männlich",
-          salutation: "Herr",
-          nickname: "Sören",
-          context: ["Recherche-Team"],
-          email: "mail@soerenengels.de",
-          phone: "+49 1234 657 412 32",
-          socialMedia: [
-            {
-              media: "Twitter",
-              handle: "soerenengels",
-            },
-          ],
-          city: "Halle (Saale)",
-          postcode: "06108",
-          street: "Mansfelder Straße",
-          houseNumber: "56",
-          adressContext: "",
-          description: "",
-          access: ["alle"],
-          imageUrl: "",
-        },
+      dataStructure: [
+        { value: "Nachname" },
+        { value: "Vorname" },
+        { value: "Geschlechtsidentität" },
+        { value: "Anrede" },
+        { value: "Codename / Spitzname" },
+        { value: "Kontext / Gruppe" },
+        { value: "E-Mail" },
+        { value: "Telefon" },
+        { value: "Social Media" },
+        { value: "Stadt" },
+        { value: "PLZ" },
+        { value: "Straße" },
+        { value: "Hausnummer" },
+        { value: "Adresszusatz" },
+        { value: "Notizen" },
+        { value: "Sichtbarkeit" },
+        { value: "Image" },
       ],
-      stories: [],
     };
+  },
+  computed: {
+    contacts() {
+      return this.$store.state.contacts;
+    },
   },
   methods: {
     addContact() {
-      console.log("Add new Line for Contact and jump focus to line.");
+      // Keep aligned with TabelleKontakte.vue --> methods
+      console.log("Method: Add new Contact");
+      // Add New Object in State-Contacts-Array
+      this.$store.commit("addContact", this.sumOfColumns);
+      // Focus in first Cell of new Line
     },
     addFilter() {
       console.log("Open Filter Preferences.");
@@ -126,6 +63,7 @@ export default {
   components: {
     Navigation,
     Button,
+    TabelleKontakte,
   },
 };
 </script>

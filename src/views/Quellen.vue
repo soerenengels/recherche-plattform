@@ -7,17 +7,32 @@
         <em>Get a Documents State of Mind.</em>
       </p>
     </header>
-    <!-- <aside>
-      <Button type="primary" icon="true">Mögliche Quelle hinzufügen</Button>
-      <input type="search" value="Suche" />
-    </aside> -->
-    <TabelleQuellen :structure="structure" :dataSrc="data" />
+    <LayoutTwoThirds>
+      <template v-slot:main>
+        <TabelleQuellen :structure="structure" :dataSrc="data" />
+      </template>
+      <template v-slot:context>
+        <p>
+          Viele Quellen sind über das Internet verfügbar. Welche für die
+          Geschichte wesentliche Orte lassen sich besuchen? (Auswahl treffen)
+          Welche Interviewpartner:innen können und wollen aussagen? Welche
+          Alternativen gibt es für die vertraulichen Dokumente? (z.B. Pläne,
+          Anträge, Budgets, Beratungen, Instruktionen, Verträge, Quittungen,
+          Kontoauszüge, Korrespondenzen, E-Mails, Kalender, Protokolle,
+          Anwesenheitslisten, Tagebücher, interne Datenbanken, interne
+          Forschungen, Evaluationen, Fragebögen, Beschwerden, Fotos, Videos) →
+          Aufwand der Erschließung abwägen (einziges Beweisstück oder
+          spezifisches Detail)
+        </p>
+      </template>
+    </LayoutTwoThirds>
   </main>
 </template>
 
 <script>
 import Navigation from "@/components/Navigation.vue";
 import TabelleQuellen from "@/components/TabelleQuellen.vue";
+import LayoutTwoThirds from "@/components/LayoutTwoThirds.vue";
 /* import Button from "@/components/Button.vue"; */
 
 export default {
@@ -31,18 +46,6 @@ export default {
         { value: "Interviews", type: "text" },
         { value: "Vertrauliche Dokumente", type: "text" },
       ],
-      /* data: [
-        [
-          {
-            title: "Hypothese",
-            class: "prob",
-            content:
-              "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, autem ad! Voluptatum possimus est, architecto nemo, soluta natus ex in commodi quos asperiores eveniet neque reiciendis officia perferendis deserunt porro.",
-            date: 20200106,
-            actors: [],
-          },
-        ],
-      ], */
     };
   },
   props: {},
@@ -59,6 +62,7 @@ export default {
   components: {
     Navigation,
     TabelleQuellen,
+    LayoutTwoThirds,
     /* Button, */
   },
 };
@@ -72,7 +76,7 @@ aside input {
   background: none;
   border: none;
   padding: 0.5em;
-  font-size: 1em;
+  font-size: 2rem;
   font-family: "forma-djr-display", "Helvetica Neue", "Avenir", "Helvetica",
     "Arial", sans-serif;
 }

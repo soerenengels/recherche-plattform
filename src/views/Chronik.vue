@@ -13,7 +13,6 @@
       >
         <EventsCard :sectionTypeObject="timelineSection" />
       </template>
-      <teleport to="#overlayContainer" :disabled="true"> Inhalt </teleport>
     </div>
   </main>
 </template>

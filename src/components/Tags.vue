@@ -1,14 +1,13 @@
 <template>
   <ul>
     <template v-for="tagObject in tagsArray" :key="tagObject.value">
-      <li :style="'background-color: ' + tagObject.backgroundColor">
-        {{ tagObject.value }}
-      </li>
+      <Tag :tagObject="tagObject" />
     </template>
   </ul>
 </template>
 
 <script>
+import Tag from "@/components/Tag.vue";
 export default {
   name: "Tags",
   props: {
@@ -16,16 +15,14 @@ export default {
       type: Array,
     },
   },
+  components: {
+    Tag,
+  },
 };
 </script>
 
 <style scoped>
 ul {
   list-style-type: none;
-}
-li {
-  display: inline-block;
-  padding: 0.5em;
-  border-radius: 1em;
 }
 </style>

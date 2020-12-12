@@ -6,10 +6,19 @@
         v-for="eventObject in eventObjectsByType"
         :key="eventObject.id"
         :eventObject="eventObject"
+        lightBackground
       />
       <Button @click="addItem(item)" type="primary" icon>
         {{ sectionTypeObject.buttonText }}
       </Button>
+
+      <Modal v-if="modalVisible">
+        Titel bearbeiten<br />
+        Textarea bearbeiten<br />
+        Datum bearbeiten<br />
+        Akteur:innen bearbeiten<br />
+        <Event />
+      </Modal>
     </section>
   </transition>
 </template>
@@ -17,14 +26,21 @@
 <script>
 import Event from "@/components/Event.vue";
 import Button from "@/components/Button.vue";
+import Modal from "@/components/Modal.vue";
 
 export default {
   name: "EventsCard",
   props: {
     sectionTypeObject: Object,
   },
+  data() {
+    return {
+      modalVisible: false,
+    };
+  },
   methods: {
     addItem(/* eventObject */) {
+      this.modalVisible = true;
       const sampleObject = {
         id: this.$store.state.events.length + 1,
         title: "Sample Event",
@@ -52,6 +68,7 @@ export default {
   components: {
     Event,
     Button,
+    Modal,
   },
 };
 </script>

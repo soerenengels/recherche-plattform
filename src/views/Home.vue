@@ -6,6 +6,7 @@
     <p v-if="!stories">
       Hallo {{ user.name }}! Ihr habt aktuell keine laufenden Geschichten.<br />
       Starte eine neue Story.
+      <router-link to="/hypothese">Go.</router-link>
       <!-- <Button type="add" @click="navToNew()" /> -->
     </p>
   </main>

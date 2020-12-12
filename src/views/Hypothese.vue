@@ -2,29 +2,32 @@
   <Navigation />
   <main>
     <Title>Was soll aufgedeckt werden?</Title>
-    <div class="twoThird">
-      <section>
-        <textarea width="60%" height="auto" v-model="hypothesis"></textarea>
+    <LayoutTwoThirds>
+      <template v-slot:main>
+        <textarea
+          width="60%"
+          height="auto"
+          v-model="hypothesis.content"
+        ></textarea>
         <!-- <Textarea  v-model="hypothesis"> </Textarea> -->
-      </section>
-      <transition appear>
-        <aside>
-          <p>
-            Formuliere eine <strong>Hypothese</strong>:
-            <em
-              >Stimmt es, dass …? Wie kann das sein? Was sind die Folgen? Was
-              wird dagegen getan?</em
-            ><br />
-            Hast du bereits eine konkrete Idee oder soll dir mit Fragen auf die
-            Sprünge geholfen werden?
-          </p>
-        </aside>
-      </transition>
-    </div>
+      </template>
+      <template v-slot:context>
+        <p>
+          Formuliere eine <strong>Hypothese</strong>:
+          <em
+            >Stimmt es, dass …? Wie kann das sein? Was sind die Folgen? Was wird
+            dagegen getan?</em
+          ><br />
+          Hast du bereits eine konkrete Idee oder soll dir mit Fragen auf die
+          Sprünge geholfen werden?
+        </p>
+      </template>
+    </LayoutTwoThirds>
   </main>
 </template>
 
 <script>
+import LayoutTwoThirds from "@/components/LayoutTwoThirds.vue";
 import Navigation from "@/components/Navigation.vue";
 import Title from "@/components/Title.vue";
 /* import Textarea from "@/components/Textarea.vue"; */
@@ -43,7 +46,7 @@ export default {
   computed: {
     hypothesis: {
       get() {
-        return this.$store.getters.getHypothesis;
+        return this.$store.getters.getHypothesis[0];
       },
       set(value) {
         this.$store.commit("changeHypothesis", value);
@@ -52,6 +55,7 @@ export default {
   },
   method: {},
   components: {
+    LayoutTwoThirds,
     Navigation,
     Title,
     /* Textarea, */

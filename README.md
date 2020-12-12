@@ -8,7 +8,6 @@ Anzahl der mit diesem Nebenprojekt verbrachte Nächte: 3
 
 ## To Do
 
-- Menü: Aktiven Link bei kleinen Bildschirmen in Viewport scrollen
 - Hypothese: Konkrete Anleitung zum Schreiben einer Hypothese verfassen
 - Hypothese: Freitextfeld für das Verfassen einer Hypothese einfügen
 - Chronik: Buttons richtige Funktion zuweisen
@@ -27,6 +26,7 @@ Anzahl der mit diesem Nebenprojekt verbrachte Nächte: 3
 - Authentifizierung hinzufügen
 - Kollaboratives bearbeiten ermöglichen
 - Kontakte: Social Media richtig anzeigen
+- Menü: Aktiven Link bei kleinen Bildschirmen in Viewport scrollen
 
 ### Done
 

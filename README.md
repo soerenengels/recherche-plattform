@@ -121,6 +121,10 @@ Zu berücksichtigen:
 
 - https://www.smashingmagazine.com/2020/11/vue-applications-vue-testing-library/
 
+#### API
+
+- https://www.w3.org/TR/2020/NOTE-design-principles-20201110/
+
 ## Kickstart
 
 ```bash

@@ -4,7 +4,7 @@
 
 Die Rechercheplattform **re:form** basiert auf dem Ansatz der _story-based inquireries_ von Mark Lee Hunter und Luuk Sengers.
 
-Anzahl der mit diesem Nebenprojekt verbrachte Nächte: 3
+Anzahl der mit diesem Nebenprojekt verbrachte Nächte: 4
 
 ## To Do
 
@@ -20,6 +20,7 @@ Anzahl der mit diesem Nebenprojekt verbrachte Nächte: 3
 - File: Toggle-Button einbauen zum umschalten zwischen Markdown und visueller Ansicht
 - File: Zum Markdown-Editor machen
 - File: im Aside (abgeklopfte) Quellen anzeigen
+- File: Make Blocks draggable (Cursor: https://developer.mozilla.org/de/docs/Web/CSS/cursor)
 - Thema: Tabelle als Komponente
 - Thema: Funktion für das Hinzufügen eines neuen Artikels
 - Transkriptions-API einbinden
@@ -44,6 +45,8 @@ Anzahl der mit diesem Nebenprojekt verbrachte Nächte: 3
 - File: im Aside Outline anzeigen
 - File: im Aside Ereignisse anzeigen
 - File: im Aside Hypothese anzeigen
+- a11y
+- i18n
 
 ## Chronik
 
@@ -70,6 +73,53 @@ actors: Array, Liste von Akteur:innen
 ## Assets
 
 Icon inspiriert an: https://icon-library.com/icon/search-icon-free-29.html
+
+### Acessability
+
+Zu berücksichtigen: 
+
+- Authoring Tool Acessability Guidelines https://www.w3.org/WAI/standards-guidelines/atag/
+- Web Content Acessability Guidelines https://www.w3.org/WAI/standards-guidelines/wcag/
+- https://html5accessibility.com/stuff/2020/11/24/know-your-standards/
+
+### Potentielle Ressourcen
+
+#### Kalendar
+
+- https://github.com/SoorajSNBlaze333/tooltip-sequence
+
+#### UI
+
+- - https://spotify.design/article/5-things-i-wish-id-known-before-starting-a-design-system-at-spotify
+
+#### Tabelle: UX
+
+- https://www.uxbooth.com/articles/designing-user-friendly-data-tables/
+
+#### Tabelle: Select
+
+- https://github.com/sagalbot/vue-select
+
+#### Tabelle: Responsiveness
+
+- https://adrianroselli.com/2020/11/under-engineered-responsive-tables.html
+
+#### Formular-Gestaltung, File-Upload
+
+- https://austingil.com/build-html-forms-right-styling/
+
+#### Markdown-Editor
+
+- https://github.com/markdown-it/markdown-it
+- https://github.com/commonmark/commonmark.js
+
+#### Onboarding: Tooltip-Sequenz
+
+- https://github.com/SoorajSNBlaze333/tooltip-sequence
+
+#### Testing
+
+- https://www.smashingmagazine.com/2020/11/vue-applications-vue-testing-library/
 
 ## Kickstart
 

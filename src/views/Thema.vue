@@ -3,12 +3,16 @@
   <main>
     <header>
       <p>
-        Hier entsteht eine Themensammlung.<br />
-        In einer Tabelle werden Links und Dateien zu einem Thema gesammelt.<br />
-        Sie können verschlagwortet werden und so produktiv gemacht werden.
+        Hier entsteht deine <strong>Themensammlung</strong>. In der Tabelle hast
+        du Möglichkeit Links und Dateien zu deinem Thema zu sammeln. Indem zu
+        sie verschlagwortest machst du sie produktiv und filterbar.
       </p>
     </header>
-    <Tabelle :structure="structure" :dataSrc="topicCollection" />
+    <Tabelle
+      :structure="structure"
+      :dataSrc="topicCollection"
+      title="Themensammlung"
+    />
   </main>
 </template>
 

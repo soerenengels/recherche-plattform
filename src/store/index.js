@@ -8,12 +8,20 @@ const initialState = {
     sources: [
       {
         id: 0,
-        description: "",
+        description: "Test",
         eventId: 0,
         sourceType: "public",
       },
     ],
   },
+  sources: [
+    {
+      id: 0,
+      description: "Test",
+      eventId: 0,
+      sourceType: "public",
+    },
+  ],
   contacts: [
     {
       lastName: "Engels",
@@ -107,10 +115,13 @@ const initialState = {
   ],
   topicCollection: [
     {
-      url: "https://www.url.de/",
-      title: "Titel",
-      author: "Autor:in",
-      description: "Beschreibung des Inhaltes die da Lorem ipsum wäre.",
+      url: {
+        url: "https://www.url.de/",
+        text: "https://www.url.de/"
+      },
+      title: { text: "Titel" },
+      author: { text: "Autor:in" },
+      description: { text: "Beschreibung des Inhaltes die da Lorem ipsum wäre." },
       actor: [
         {
           value: "Sören",
@@ -128,7 +139,12 @@ const initialState = {
           backgroundColor: "red",
         },
       ],
-      files: "test.pdf",
+      files: [
+        {
+          text: "test.pdf",
+          url: "./fileStorage/test.pdf"
+        },
+      ],
     },
     {
       url: "https://www.this-is-an-url.de/",
@@ -193,8 +209,9 @@ export default createStore({
       this.setters.setHypothesis(value)
       console.log(value);
     },
-    editHypotheseTitle(state, value) {
+    editHypothesisTitle(state, value) {
       console.log("Change State through Edit");
+      console.log(value);
       this.setters.setHypothesis(value)
     },
     updateBlockinFile(state, payload) {

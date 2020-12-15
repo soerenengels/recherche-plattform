@@ -7,7 +7,6 @@
       </template>
       <template v-slot:context>
         <div class="sidebar">
-          <Button type="primary">Toggle Markdown-Editor</Button>
           <BlockToC />
           <section>
             <h2>Ereignisse</h2>
@@ -17,7 +16,13 @@
           </section>
           <section>
             <h2>Quellen</h2>
+            <template v-for="source in dataSources" :key="source.id">
+              <!--<Event lightBackground closed :eventObject="source" />-->
+              <!-- Add Source-Card -->
+              {{ source.description }}
+            </template>
           </section>
+          <Button type="primary">Toggle Markdown-Editor</Button>
         </div>
       </template>
     </LayoutTwoThirds>
@@ -41,6 +46,9 @@ export default {
     dataEvents() {
       return this.$store.state.events;
     },
+    dataSources() {
+      return this.$store.state.sources;
+    },
   },
   props: {},
   components: {
@@ -57,6 +65,6 @@ export default {
 <style scoped>
 .sidebar {
   position: sticky;
-  top: 0;
+  top: 2em;
 }
 </style>

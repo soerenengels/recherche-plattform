@@ -19,10 +19,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: #000000;
   font-size: 18px;
-  padding: 2rem;
-  height: calc(100vh - 4rem);
-  width: calc(100vw - 4rem);
+  padding: 1rem;
+  height: calc(100vh - 2rem);
+  width: calc(100vw - 2rem);
   /*box-sizing: border-box;*/
+}
+@media screen and (min-width: 800px) {
+  #app {
+    padding: 2rem;
+    height: calc(100vh - 4rem);
+    width: calc(100vw - 4rem);
+  }
 }
 
 p,

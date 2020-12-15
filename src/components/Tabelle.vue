@@ -3,6 +3,15 @@
     <table>
       <thead>
         <tr>
+          <td>
+            {{ title }}
+          </td>
+          <td>
+            <Button type="primary" icon>Add</Button>
+            <ButtonFilter :structure="structure" />
+          </td>
+        </tr>
+        <tr>
           <td v-for="column in structure" :key="column.value">
             {{ column.value }}
           </td>
@@ -10,10 +19,10 @@
       </thead>
       <tbody>
         <tr v-for="item in dataSrc" :key="item.id">
-          <td>{{ item.url }}</td>
-          <td>{{ item.title }}</td>
-          <td>{{ item.author }}</td>
-          <td>{{ item.description }}</td>
+          <td><BlockURL :anchorObject="item.url" /></td>
+          <td><BlockText :blockObject="item.title" /></td>
+          <td><BlockText :blockObject="item.author" /></td>
+          <td><BlockText :blockObject="item.description" /></td>
           <td>
             <Tags :tagsArray="item.actor" />
           </td>
@@ -22,7 +31,7 @@
           <td>
             <Tags :tagsArray="item.tags" />
           </td>
-          <td>{{ item.files }}</td>
+          <td><BlockFiles :fileArray="item.files" /></td>
         </tr>
         <tr class="newline" v-if="newLine">
           <td></td>
@@ -40,7 +49,12 @@
 </template>
 
 <script>
+import Button from "@/components/Button.vue";
+import ButtonFilter from "@/components/ButtonFilter.vue";
 import Tags from "@/components/Tags.vue";
+import BlockURL from "@/components/BlockURL.vue";
+import BlockText from "@/components/BlockText.vue";
+import BlockFiles from "@/components/BlockFiles.vue";
 
 export default {
   name: "Tabelle",
@@ -51,9 +65,18 @@ export default {
       type: Boolean,
       default: true,
     },
+    title: {
+      type: String,
+      default: "Beispiel",
+    },
   },
   components: {
+    Button,
+    ButtonFilter,
     Tags,
+    BlockURL,
+    BlockText,
+    BlockFiles,
   },
 };
 </script>
@@ -69,6 +92,10 @@ table {
 td {
   vertical-align: top;
 }
+td p,
+td a {
+  font-size: 1rem;
+}
 thead td {
   padding: 0.2em;
   white-space: nowrap;
@@ -77,7 +104,8 @@ thead td {
 tbody td {
   padding: 0.2em;
 }
-tbody tr:hover {
+tbody tr:hover,
+tbody tr:focus-within {
   background-color: rgba(255, 244, 201, 0.4);
   transition: background-color 0.3s ease-out;
   border-radius: 1em;

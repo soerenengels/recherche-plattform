@@ -4,7 +4,7 @@
     <header>
       <p>
         Überlege zu jedem Ereignis, welche Quellen es geben könnte.<br />
-        <em>Get a Documents State of Mind.</em>
+        &#x2192; <em>Get a Documents State of Mind.</em>
       </p>
     </header>
     <LayoutTwoThirds>
@@ -69,15 +69,4 @@ export default {
 </script>
 
 <style scoped>
-header {
-  display: flex;
-}
-aside input {
-  background: none;
-  border: none;
-  padding: 0.5em;
-  font-size: 2rem;
-  font-family: "forma-djr-display", "Helvetica Neue", "Avenir", "Helvetica",
-    "Arial", sans-serif;
-}
 </style>

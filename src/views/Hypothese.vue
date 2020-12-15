@@ -12,15 +12,21 @@
         <!-- <Textarea  v-model="hypothesis"> </Textarea> -->
       </template>
       <template v-slot:context>
-        <p>
-          Formuliere eine <strong>Hypothese</strong>:
-          <em
-            >Stimmt es, dass …? Wie kann das sein? Was sind die Folgen? Was wird
-            dagegen getan?</em
-          ><br />
-          Hast du bereits eine konkrete Idee oder soll dir mit Fragen auf die
-          Sprünge geholfen werden?
-        </p>
+        <section>
+          <p>
+            <strong>Seite 1/3</strong> Einstiegs-Tutorial, durchklickbar,
+            schließbar
+          </p>
+          <p>
+            Formuliere eine <strong>Hypothese</strong>:
+            <em
+              >Stimmt es, dass …? Wie kann das sein? Was sind die Folgen? Was
+              wird dagegen getan?</em
+            ><br />
+            Hast du bereits eine konkrete Idee oder soll dir mit Fragen auf die
+            Sprünge geholfen werden?
+          </p>
+        </section>
       </template>
     </LayoutTwoThirds>
   </main>
@@ -64,17 +70,6 @@ export default {
 </script>
 
 <style scoped>
-.twoThird {
-  display: flex;
-}
-.twoThird > section {
-  flex: 55% 2;
-}
-.twoThird > aside {
-  flex: 25% 1;
-  font-size: 1rem;
-  hyphens: auto;
-}
 textarea {
   background: #fff4c9;
   border-radius: 2rem;

@@ -8,30 +8,34 @@ Anzahl der mit diesem Nebenprojekt verbrachte Nächte: 4
 
 ## To Do
 
-- responsive Anpassung der LayoutTwoThirds-Komponente
-- responsive Anpassung der EventsCard-Komponente
-- Verbesserung der responsive-Anpassung der Navigation-Komponente
+- Thema: Funktion für das Hinzufügen eines neuen Artikels
 - Chronik: Verbesserung des Bindings von Event-Komponente & State
-- Quellen: Anpassung der Schrift im Kontext-Bereich
-- File: aside bei kleinen Bildschirmen anpassen
 - Thema: Tabellenzellen mehr Funktionen entsprechend Kontext geben(z.B. bei URL)
 - Quellen: Tabelle stylen
 - Quellen: Tabelle responsive machen
-- File: Toggle-Button einbauen zum umschalten zwischen Markdown und visueller Ansicht
-- File: Zum Markdown-Editor machen
+- File: neuen Block einfügen bei Enter-Event
 - File: im Aside (abgeklopfte) Quellen anzeigen
-- File: Make Blocks draggable (Cursor: https://developer.mozilla.org/de/docs/Web/CSS/cursor)
-- Thema: Tabelle als Komponente
-- Thema: Funktion für das Hinzufügen eines neuen Artikels
+- Hypothese: mehrseitige Tutorial-Komponente erstellen
 - Transkriptions-API einbinden
-- state stabil lokal oder in Datenbank speichern
+- state stabil lokal oder in Datenbank speichern (https://www.mikestreety.co.uk/blog/vue-js-using-localstorage-with-the-vuex-store)
 - Authentifizierung hinzufügen
 - Kollaboratives bearbeiten ermöglichen
 - Kontakte: Social Media richtig anzeigen
+- File: Toggle-Button Funktion geben
+- File: Zum Markdown-Editor machen
+- File: Make Blocks draggable (Cursor: https://developer.mozilla.org/de/docs/Web/CSS/cursor)
 - Menü: Aktiven Link bei kleinen Bildschirmen in Viewport scrollen
+- a11y
+- i18n
 
 ### Done
 
+- Thema: Tabelle als Komponente
+- File: aside bei kleinen Bildschirmen anpassen
+- Quellen: Anpassung der Schrift im Kontext-Bereich
+- responsive Anpassung der EventsCard-Komponente
+- Verbesserung der responsive-Anpassung der Navigation-Komponente
+- responsive Anpassung der LayoutTwoThirds-Komponente
 - Chronik: Vier Bereiche aufspannen
 - Chronik: Ereignisse in ihren zugeordneten Bereichen anzeigen
 - Chronik: Ereignisse klappbar machen
@@ -45,8 +49,6 @@ Anzahl der mit diesem Nebenprojekt verbrachte Nächte: 4
 - File: im Aside Outline anzeigen
 - File: im Aside Ereignisse anzeigen
 - File: im Aside Hypothese anzeigen
-- a11y
-- i18n
 
 ## Chronik
 

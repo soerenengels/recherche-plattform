@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article class="blockEditor" @keydown.enter="addBlock($event)">
     <template v-for="blockObject in dataArray" :key="blockObject.id">
       <template v-if="blockObject.type == 'h1'">
         <h1
@@ -61,6 +61,10 @@ export default {
       };
       this.$store.commit(commitObject);
     },
+    addBlock(e) {
+      console.log("Add Block");
+      console.log(e);
+    },
   },
   props: {
     dataArray: Array,
@@ -70,4 +74,16 @@ export default {
 </script>
 
 <style scoped>
+.blockEditor h1 {
+  font-size: 2em;
+  padding-bottom: 1rem;
+}
+.blockEditor h2 {
+  font-size: 1.5em;
+  padding: 1rem 0 0.5rem;
+}
+.blockEditor p {
+  font-size: 1.5em;
+  max-width: 65ch;
+}
 </style>

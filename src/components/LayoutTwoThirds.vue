@@ -12,17 +12,28 @@
 </template>
 
 <style scoped>
-.twoThirds {
-  display: flex;
+@media screen and (min-width: 800px) {
+  .twoThirds {
+    display: flex;
+  }
+  .twoThirds > section {
+    flex: 50% 2;
+    padding-right: 2em;
+    overflow-x: scroll;
+  }
+  .twoThirds > aside {
+    flex: 25% 1;
+    font-size: 1rem;
+    hyphens: auto;
+  }
+  .twoThirds p {
+    font-size: 1.5em;
+  }
 }
-.twoThirds > section {
-  flex: 50% 2;
-  padding-right: 2em;
-  overflow-x: scroll;
-}
-.twoThirds > aside {
-  flex: 25% 1;
-  font-size: 1rem;
-  hyphens: auto;
+@media screen and (max-width: 800px) {
+  .twoThirds {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 </style>

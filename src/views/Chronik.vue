@@ -62,8 +62,15 @@ header {
 }
 .timeline {
   display: flex;
-  align-items: flex-start;
+
+  flex-direction: column;
   width: 100%;
   overflow: auto;
+}
+@media screen and (min-width: 800px) {
+  .timeline {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 }
 </style>

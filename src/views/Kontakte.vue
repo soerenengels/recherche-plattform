@@ -2,10 +2,10 @@
   <Navigation />
   <main>
     <header>
-      <Button type="primary" icon="true" @click="addContact()"
+      <Button type="primary" icon @click="addContact()"
         >Kontakt hinzufügen</Button
       >
-      <Button type="secondary">Filter</Button>
+      <ButtonFilter :structure="dataStructure">Filter</ButtonFilter>
       <input type="search" value="Suche" />
     </header>
     <TabelleKontakte :structure="dataStructure" :dataSrc="contacts" />
@@ -15,6 +15,7 @@
 <script>
 import Navigation from "@/components/Navigation.vue";
 import Button from "@/components/Button.vue";
+import ButtonFilter from "@/components/ButtonFilter.vue";
 import TabelleKontakte from "../components/TabelleKontakte.vue";
 
 export default {
@@ -63,6 +64,7 @@ export default {
   components: {
     Navigation,
     Button,
+    ButtonFilter,
     TabelleKontakte,
   },
 };

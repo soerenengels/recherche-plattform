@@ -1,12 +1,15 @@
 <template>
   <header>
-    <Title>Teamdashboard</Title>
+    <Title>Recherche-Plattform</Title>
   </header>
   <main>
     <p v-if="!stories">
-      Hallo {{ user.name }}! Ihr habt aktuell keine laufenden Geschichten.<br />
-      Starte eine neue Story.
-      <router-link to="/hypothese">Go.</router-link>
+      Hallo {{ user.name }}!<br />Die vorliegende Recherche-Plattform ist
+      <a href="https://github.com/soerenengels/recherche-plattform"
+        >Work in Progress</a
+      >. Sie basiert auf dem Ansatz der Story-based Inquiry Mark Lee Hunter und
+      Luuk Sengers.<br />
+      <router-link to="/hypothese">Starte eine neue Story.</router-link>
       <!-- <Button type="add" @click="navToNew()" /> -->
     </p>
   </main>
@@ -28,7 +31,7 @@ export default {
   data() {
     return {
       user: {
-        name: "Sören",
+        name: "User:in",
       },
       stories: false,
     };
@@ -41,4 +44,8 @@ export default {
 </script>
 
 <style scoped>
+a {
+  font-size: 1em;
+  text-decoration: underline;
+}
 </style>

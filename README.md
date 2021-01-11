@@ -26,29 +26,6 @@ Anzahl der mit diesem Nebenprojekt verbrachte Nächte: 5
 - a11y
 - i18n
 
-### Done
-
-- Chronik: Verbesserung des Bindings von Event-Komponente & State
-- Thema: Tabelle als Komponente
-- File: aside bei kleinen Bildschirmen anpassen
-- Quellen: Anpassung der Schrift im Kontext-Bereich
-- responsive Anpassung der EventsCard-Komponente
-- Verbesserung der responsive-Anpassung der Navigation-Komponente
-- responsive Anpassung der LayoutTwoThirds-Komponente
-- Chronik: Vier Bereiche aufspannen
-- Chronik: Ereignisse in ihren zugeordneten Bereichen anzeigen
-- Chronik: Ereignisse klappbar machen
-- Chronik: Datenstruktur für Ereignisse anlegen (id, type, title, description, date, actors) -> Dokumentiert in README.md
-- Chronik: Buttons Basis-Funktion zuweisen
-- Quellen: Alle Ereignisse in Tabelle anzeigen
-- Components: Button: Primary, Secondary, Tertiary anlegen + +Icon
-- Hypothese: Konkrete Anleitung zum Schreiben einer Hypothese verfassen
-- Hypothese: Freitextfeld für das Verfassen einer Hypothese einfügen
-- Chronik: Buttons richtige Funktion zuweisen
-- File: im Aside Outline anzeigen
-- File: im Aside Ereignisse anzeigen
-- File: im Aside Hypothese anzeigen
-
 ## Chronik
 
 Hier werden Ereignisse angelegt.

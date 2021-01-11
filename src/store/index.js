@@ -75,12 +75,12 @@ const initialState = {
     {
       id: 0,
       type: "h1",
-      content: "File"
+      content: "Titel"
     },
     {
       id: 1,
       type: "p",
-      content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sit quasi soluta tempora, eligendi molestias, blanditiis quas incidunt voluptatem ipsum fugit hic impedit beatae accusamus nemo id perferendis quia deleniti."
+      content: "In diesem Textfile kannst du die Geschichte zusammenschreiben. Auf der rechten Seite findest du neben einem Outline der Überschriften weitere Unterstützung, um schnell auf Informationen zuzugreifen. Mit einem Klick auf das Icon in der oberen rechten Ecke der jeweiligen Notiz, kannst du die Informationen auf- oder zuklappen."
     },
     {
       id: 2,
@@ -175,9 +175,6 @@ const initialState = {
 export default createStore({
   state: initialState,
   setters: {
-    setHypothesis(state, value) {
-      state.events[0].content = value;
-    }
   },
   getters: {
     getEvents(state) {
@@ -204,6 +201,14 @@ export default createStore({
       console.log(newContact)
       state.contacts.push(newContact);
     },
+    addTopicEntity(state, numberOfColumns) {
+      const newTopicEntity = [];
+      for (numberOfColumns > 0; numberOfColumns--;) {
+        newTopicEntity.push(" ");
+      }
+      console.log(newTopicEntity)
+      state.topicCollection.push(newTopicEntity);
+    },
     changeHypothesis(state, value) {
       console.log("New State");
       this.setters.setHypothesis(value)
@@ -212,10 +217,25 @@ export default createStore({
     editHypothesisTitle(state, value) {
       console.log("Change State through Edit");
       console.log(value);
-      this.setters.setHypothesis(value)
+      const hypothesisId = 0;
+      state.events[hypothesisId].title = value;
+    },
+    editHypothesisContent(state, value) {
+      console.log("Change State through Edit");
+      console.log(value);
+      const hypothesisId = 0;
+      state.events[hypothesisId].content = value;
     },
     updateBlockinFile(state, payload) {
       state.file[payload.id].content = payload.text;
+      console.log(payload.id, payload.text)
+    },
+    insertBlockinFile(state, payload) {
+      state.file.splice(payload.index, 0, payload.obj);
+      state.file.filter(obj => obj.id > payload.index - 1).forEach(obj => {
+        obj.id++
+      });
+      console.log(state.file);
     }
   },
   actions: {

@@ -6,6 +6,7 @@
     @blur="editable = false"
     :contenteditable="editable"
   ></a>
+  <a :href="url" class="link">#</a>
 </template>
 
 <script>
@@ -20,6 +21,7 @@ export default {
   },
   computed: {
     url() {
+      /* Filter for www or http or https */
       return this.anchorObject.url;
     },
     text() {
@@ -28,3 +30,15 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+a {
+  font-size: 1em;
+}
+.link {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 2em;
+  padding: 0.5em;
+  margin-left: 0.5em;
+}
+</style>

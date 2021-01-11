@@ -18,6 +18,7 @@
                   (cell.type == 'reas') |
                   (cell.type == 'solu')
               "
+              class="stickyColumn"
             >
               <Event darkBackground :eventObject="cell" />
             </td>
@@ -65,6 +66,7 @@ thead td {
   padding: 0.2em;
   white-space: nowrap;
   min-width: 18ch;
+  background: #f6df81;
 }
 tbody td {
   padding: 0.2em;
@@ -73,5 +75,9 @@ tbody tr:hover {
   background-color: rgba(255, 244, 201, 0.4);
   transition: background-color 0.3s ease-out;
   border-radius: 1em;
+}
+tr td:first-of-type {
+  position: sticky;
+  left: 0;
 }
 </style>

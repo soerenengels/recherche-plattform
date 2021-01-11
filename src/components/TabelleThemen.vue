@@ -70,9 +70,17 @@ export default {
       default: "Beispiel",
     },
   },
+  computed: {
+    sumOfColumns() {
+      return this.structure.length;
+    },
+  },
   methods: {
     addRow() {
-      console.log("addRow");
+      console.log("Method: Add new Row of Topic");
+      // Add New Object in State-Contacts-Array
+      this.$store.commit("addTopicEntity", this.sumOfColumns);
+      // Focus in first Cell of new Line
     },
   },
   components: {
@@ -97,6 +105,7 @@ table {
 }
 td {
   vertical-align: top;
+  height: 1em;
 }
 td p,
 td a {

@@ -8,7 +8,7 @@
         sie verschlagwortest machst du sie produktiv und filterbar.
       </p>
     </header>
-    <Tabelle
+    <TabelleThemen
       :structure="structure"
       :dataSrc="topicCollection"
       title="Themensammlung"
@@ -18,7 +18,7 @@
 
 <script>
 import Navigation from "@/components/Navigation.vue";
-import Tabelle from "@/components/Tabelle.vue";
+import TabelleThemen from "@/components/TabelleThemen.vue";
 
 export default {
   name: "Thema",
@@ -44,7 +44,7 @@ export default {
   },
   components: {
     Navigation,
-    Tabelle,
+    TabelleThemen,
   },
 };
 </script>

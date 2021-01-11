@@ -43,10 +43,10 @@ export default {
       this.modalVisible = true;
       const sampleObject = {
         id: this.$store.state.events.length + 1,
-        title: "Sample Event",
+        title: "Titel des Ereignisses",
         type: this.sectionTypeObject.type,
         content:
-          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, autem ad! Voluptatum possimus est, architecto nemo, soluta natus ex in commodi quos asperiores eveniet neque reiciendis officia perferendis deserunt porro.",
+          "Beschreibe hier möglichst detailiert, welche Akteur:innen was tun. Ein Ereignis sollte möglichst mit konkreten Verben beschrieben werden.",
         date: 20200106,
         actors: [],
       };

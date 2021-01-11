@@ -4,17 +4,15 @@
 
 Die Rechercheplattform **re:form** basiert auf dem Ansatz der _story-based inquireries_ von Mark Lee Hunter und Luuk Sengers.
 
-Anzahl der mit diesem Nebenprojekt verbrachte Nächte: 4
+Anzahl der mit diesem Nebenprojekt verbrachte Nächte: 5
 
 ## To Do
 
 - Thema: Funktion für das Hinzufügen eines neuen Artikels
-- Chronik: Verbesserung des Bindings von Event-Komponente & State
 - Thema: Tabellenzellen mehr Funktionen entsprechend Kontext geben(z.B. bei URL)
 - Quellen: Tabelle stylen
 - Quellen: Tabelle responsive machen
-- File: neuen Block einfügen bei Enter-Event
-- File: im Aside (abgeklopfte) Quellen anzeigen
+- File/BlockEditor: Textarea-Höhe anpassen
 - Hypothese: mehrseitige Tutorial-Komponente erstellen
 - Transkriptions-API einbinden
 - state stabil lokal oder in Datenbank speichern (https://www.mikestreety.co.uk/blog/vue-js-using-localstorage-with-the-vuex-store)
@@ -30,6 +28,7 @@ Anzahl der mit diesem Nebenprojekt verbrachte Nächte: 4
 
 ### Done
 
+- Chronik: Verbesserung des Bindings von Event-Komponente & State
 - Thema: Tabelle als Komponente
 - File: aside bei kleinen Bildschirmen anpassen
 - Quellen: Anpassung der Schrift im Kontext-Bereich
@@ -83,6 +82,7 @@ Zu berücksichtigen:
 - Authoring Tool Acessability Guidelines https://www.w3.org/WAI/standards-guidelines/atag/
 - Web Content Acessability Guidelines https://www.w3.org/WAI/standards-guidelines/wcag/
 - https://html5accessibility.com/stuff/2020/11/24/know-your-standards/
+- https://benmyers.dev/blog/aria-labels-and-descriptions/
 
 ### Potentielle Ressourcen
 
@@ -126,6 +126,10 @@ Zu berücksichtigen:
 #### API
 
 - https://www.w3.org/TR/2020/NOTE-design-principles-20201110/
+
+#### Offline
+https://ionicframework.com/blog/best-practices-for-building-offline-apps/
+https://www.smashingmagazine.com/2020/12/progressive-web-apps/
 
 ## Kickstart
 

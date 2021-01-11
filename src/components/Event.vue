@@ -1,8 +1,15 @@
 <template>
   <section :class="classObject">
-    <h3 contenteditable @input="editTitle()">{{ title }}</h3>
+    <h3 contenteditable @input="editTitle($event)">
+      {{ title }}
+    </h3>
     <span @click="toggleCollapsed($event)">v</span>
-    <p v-if="!collapsed" v-text="content" contenteditable></p>
+    <p
+      v-if="!collapsed"
+      v-text="content"
+      @input="editContent($event)"
+      contenteditable
+    ></p>
   </section>
 </template>
 
@@ -43,17 +50,10 @@ export default {
       get() {
         return this.eventObject.title;
       },
-      set() {
-        console.log("computed setter");
-        this.$store.commit("editHypothesisTitle", this.title);
-      },
     },
     content: {
       get() {
         return this.eventObject.content;
-      },
-      set() {
-        this.$store.commit("editHypothesisContent", this.content);
       },
     },
   },
@@ -62,13 +62,10 @@ export default {
       this.$data.collapsed = !this.$data.collapsed;
     },
     editTitle(event) {
-      console.log("method event handler");
-      console.log(event);
-      this.title = event.target.innerText;
-      console.log(this.title);
+      this.$store.commit("editHypothesisTitle", event.target.innerText);
     },
     editContent(event) {
-      this.content = event.target.innerText;
+      this.$store.commit("editHypothesisContent", event.target.innerText);
     },
   },
 };

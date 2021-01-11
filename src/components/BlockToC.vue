@@ -37,6 +37,8 @@ export default {
 <style scoped>
 .toc {
   list-style-type: none;
+  padding: 0 0.5em;
+  font-size: 0.75rem;
 }
 .toc ul {
   padding-left: 1em;

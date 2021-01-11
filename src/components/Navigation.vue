@@ -1,9 +1,11 @@
 <template>
   <nav>
     <ul>
-      <li v-for="item in navigation" :key="item.text">
-        <router-link :to="item.link">{{ item.text }}</router-link>
-      </li>
+      <template v-for="item in navigation" :key="item.text">
+        <li :class="{ push: item.push }">
+          <router-link :to="item.link">{{ item.text }}</router-link>
+        </li>
+      </template>
     </ul>
   </nav>
 </template>
@@ -36,6 +38,7 @@ export default {
         {
           text: "Thema",
           link: "/thema",
+          push: true,
         },
         {
           text: "Marketing",
@@ -69,6 +72,10 @@ ul {
 li {
   padding-right: 1em;
   list-style-type: none;
+}
+/* https://developer.mozilla.org/de/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container#using_auto_margins_for_main_axis_alignment */
+.push {
+  margin-left: auto;
 }
 a {
   font-size: 2em;

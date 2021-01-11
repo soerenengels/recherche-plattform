@@ -12,18 +12,7 @@
         <TabelleQuellen :structure="structure" :dataSrc="data" />
       </template>
       <template v-slot:context>
-        <p>
-          Viele Quellen sind über das Internet verfügbar. Welche für die
-          Geschichte wesentliche Orte lassen sich besuchen? (Auswahl treffen)
-          Welche Interviewpartner:innen können und wollen aussagen? Welche
-          Alternativen gibt es für die vertraulichen Dokumente? (z.B. Pläne,
-          Anträge, Budgets, Beratungen, Instruktionen, Verträge, Quittungen,
-          Kontoauszüge, Korrespondenzen, E-Mails, Kalender, Protokolle,
-          Anwesenheitslisten, Tagebücher, interne Datenbanken, interne
-          Forschungen, Evaluationen, Fragebögen, Beschwerden, Fotos, Videos) →
-          Aufwand der Erschließung abwägen (einziges Beweisstück oder
-          spezifisches Detail)
-        </p>
+        <Tutorial :data="tutorialData" />
       </template>
     </LayoutTwoThirds>
   </main>
@@ -33,6 +22,7 @@
 import Navigation from "@/components/Navigation.vue";
 import TabelleQuellen from "@/components/TabelleQuellen.vue";
 import LayoutTwoThirds from "@/components/LayoutTwoThirds.vue";
+import Tutorial from "@/components/Tutorial.vue";
 /* import Button from "@/components/Button.vue"; */
 
 export default {
@@ -45,6 +35,37 @@ export default {
         { value: "Beobachtungen", type: "text" },
         { value: "Interviews", type: "text" },
         { value: "Vertrauliche Dokumente", type: "text" },
+      ],
+      tutorialData: [
+        {
+          id: 1,
+          title: "Quellen erschließen",
+          html:
+            "<p>Bei diesem Schritt der investigativen Recherche musst du noch nicht alle Quellen ausrecherchiert haben. Ziel ist es, sich einen Überblick über mögliche Quellen zu verschaffen. Erst in einem zweiten Schritt ist dann die Erschließung zielführender Quellen gefragt.</p>",
+        },
+        {
+          id: 2,
+          title: "Öffentliche Dokumente",
+          html: "<p>Viele Quellen sind über das Internet verfügbar.</p>",
+        },
+        {
+          id: 3,
+          title: "Beobachtungen",
+          html:
+            "<p>Welche Orte sind relevant für das Ereignis? Welche für die Geschichte wesentliche Orte lassen sich besuchen? Treffe eine Auswahl.</p>",
+        },
+        {
+          id: 4,
+          title: "Interviews",
+          html:
+            "<p>Welche Interviewpartner:innen können und wollen aussagen?</p>",
+        },
+        {
+          id: 5,
+          title: "Vertrauliche Dokumente",
+          html:
+            "<p>Welche Alternativen gibt es für die vertraulichen Dokumente? (z.B. Pläne, Anträge, Budgets, Beratungen, Instruktionen, Verträge, Quittungen, Kontoauszüge, Korrespondenzen, E-Mails, Kalender, Protokolle, Anwesenheitslisten, Tagebücher, interne Datenbanken, interne Forschungen, Evaluationen, Fragebögen, Beschwerden, Fotos, Videos) &rarr; Aufwand der Erschließung abwägen (einziges Beweisstück oder spezifisches Detail).</p>",
+        },
       ],
     };
   },
@@ -63,7 +84,7 @@ export default {
     Navigation,
     TabelleQuellen,
     LayoutTwoThirds,
-    /* Button, */
+    Tutorial,
   },
 };
 </script>

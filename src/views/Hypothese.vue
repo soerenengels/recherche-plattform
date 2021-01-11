@@ -8,25 +8,12 @@
           width="60%"
           height="auto"
           v-model="hypothesis.content"
+          aria-label="Hypothese"
         ></textarea>
         <!-- <Textarea  v-model="hypothesis"> </Textarea> -->
       </template>
       <template v-slot:context>
-        <section>
-          <p>
-            <strong>Seite 1/3</strong> Einstiegs-Tutorial, durchklickbar,
-            schließbar
-          </p>
-          <p>
-            Formuliere eine <strong>Hypothese</strong>:
-            <em
-              >Stimmt es, dass …? Wie kann das sein? Was sind die Folgen? Was
-              wird dagegen getan?</em
-            ><br />
-            Hast du bereits eine konkrete Idee oder soll dir mit Fragen auf die
-            Sprünge geholfen werden?
-          </p>
-        </section>
+        <Tutorial :data="tutorialData" />
       </template>
     </LayoutTwoThirds>
   </main>
@@ -36,19 +23,42 @@
 import LayoutTwoThirds from "@/components/LayoutTwoThirds.vue";
 import Navigation from "@/components/Navigation.vue";
 import Title from "@/components/Title.vue";
+import Tutorial from "@/components/Tutorial.vue";
 /* import Textarea from "@/components/Textarea.vue"; */
 
 export default {
   name: "Hypothese",
+  props: {},
   data() {
     return {
-      user: {
-        name: "Sören",
-      },
-      stories: [],
+      tutorialData: [
+        {
+          id: 1,
+          title: "Tutorial",
+          html:
+            "<p>Willkommen auf dem Entwurf einer Recherche-Plattform nach dem Vorbild des <em>Drehbuchs der Recherche</em>.</p><p>Zu Beginn steht die Frage, was du denn eigentlich aufdecken möchtest. Dafür gilt es zunächst einmal eine Hypothese zu formulieren, die dein weiteres Vorgehen leiten wird.</p>",
+        },
+        {
+          id: 2,
+          title: "Was ist eine Hypothese?",
+          html:
+            "<p>Der Begriff der Hypothese entstammt dem Drehbuch der Recherche. Es geht darum, .... Hast du bereits eine konkrete Idee oder soll dir mit Fragen auf die Sprünge geholfen werden?</p>",
+        },
+        {
+          id: 3,
+          title: "Wie finde ich eine Hypothese?",
+          html:
+            "<p><em>Stimmt es, dass …? Wie kann das sein? Was sind die Folgen? Was wird dagegen getan?</em></p>",
+        },
+        {
+          id: 4,
+          title: "Wie geht es weiter?",
+          html:
+            "<p>Wenn du eine Hypothese aufgeschrieben hast, ist der nächste Schritt, dir Ereignisse zu überlegen, die aus der Hypothese folgen und deren Ursachen sind. Klicke auf <em>Chronik</em> in der Navigation.</p>",
+        },
+      ],
     };
   },
-  props: {},
   computed: {
     hypothesis: {
       get() {
@@ -65,6 +75,7 @@ export default {
     Navigation,
     Title,
     /* Textarea, */
+    Tutorial,
   },
 };
 </script>
@@ -74,7 +85,7 @@ textarea {
   background: #fff4c9;
   border-radius: 2rem;
   width: calc(100% - 3em);
-  min-height: 100%;
+  height: calc(100% - 3em);
   padding: 1.5rem;
   font-size: 2rem;
   border: none;

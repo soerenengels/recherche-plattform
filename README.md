@@ -13,18 +13,22 @@ Anzahl der mit diesem Nebenprojekt verbrachte Nächte: 5
 - Quellen: Tabelle stylen
 - Quellen: Tabelle responsive machen
 - File/BlockEditor: Textarea-Höhe anpassen
-- Hypothese: mehrseitige Tutorial-Komponente erstellen
-- Transkriptions-API einbinden
 - state stabil lokal oder in Datenbank speichern (https://www.mikestreety.co.uk/blog/vue-js-using-localstorage-with-the-vuex-store)
-- Authentifizierung hinzufügen
-- Kollaboratives bearbeiten ermöglichen
 - Kontakte: Social Media richtig anzeigen
-- File: Toggle-Button Funktion geben
-- File: Zum Markdown-Editor machen
+- File: Toggle-Button löschen
 - File: Make Blocks draggable (Cursor: https://developer.mozilla.org/de/docs/Web/CSS/cursor)
 - Menü: Aktiven Link bei kleinen Bildschirmen in Viewport scrollen
+- "Unsaved"-Indikator in rechter oberer Ecke (Desktop)
+- [Native-File-API](https://web.dev/file-system-access/) benutzen, um in regelmäßigen Abständen state als lokale Datei zu speichern
+- Möglichkeit geben, eine Recherche aus einer lokalen Datei zu laden
 - a11y
+
+### in ferner Zukunft
+
+- File: Zum Markdown-Editor machen
+- Kollaboratives bearbeiten ermöglichen
 - i18n
+- Transkriptions-API einbinden
 
 ## Chronik
 

@@ -12,6 +12,8 @@ Anzahl der mit diesem Nebenprojekt verbrachte Nächte: 6 [de]
 Possible through the use of Vue.js. Thanks. [en]  
 Möglich durch Vue.js. Danke. [de]
 
+uses: vue-i18n, vuedraggable
+
 ## To Do
 
 ### Tables

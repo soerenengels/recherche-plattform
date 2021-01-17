@@ -22,7 +22,7 @@
     overflow-x: scroll;
   }
   .twoThirds > aside {
-    flex: 25% 1;
+    flex: 30% 1;
     font-size: 1rem;
     hyphens: auto;
   }

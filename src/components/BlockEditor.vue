@@ -1,67 +1,92 @@
 <template>
   <article class="blockEditor">
-    <template v-for="blockObject in dataArray" :key="blockObject.id">
-      <section class="block">
-        <div class="blockHandle">&#8285;</div>
-        <template v-if="blockObject.type == 'h1'">
-          <h1
+    <!-- <template v-for="element in dataArray" :key="element.id"> -->
+    <draggable
+      v-model="dataArray"
+      group="file"
+      @start="drag = true"
+      @end="drag = false"
+      item-key="id"
+      handle=".blockHandle"
+      dragoverBubble="true"
+    >
+      <template #item="{ element }">
+        <section class="block">
+          <div class="blockHandle">&#8285;</div>
+          <template v-if="element.type == 'h1'">
+            <h1
+              contenteditable
+              :id="'blockId' + element.id"
+              @input="updateBlock(element.id, $event.target.innerText)"
+            >
+              {{ element.content }}
+            </h1>
+          </template>
+          <template v-else-if="element.type == 'h2'">
+            <h2
+              contenteditable
+              draggable
+              :id="'blockId' + element.id"
+              @input="updateBlock(element.id, $event.target.innerText)"
+            >
+              {{ element.content }}
+            </h2>
+          </template>
+          <template v-else-if="element.type == 'h3'">
+            <h3
+              contenteditable
+              :id="'blockId' + element.id"
+              @input="updateBlock(element.id, $event.target.innerText)"
+            >
+              {{ element.content }}
+            </h3>
+          </template>
+          <template v-else-if="element.type == 'h4'">
+            <h4
+              contenteditable
+              :id="'blockId' + element.id"
+              @input="updateBlock(element.id, $event.target.innerText)"
+            >
+              {{ element.content }}
+            </h4>
+          </template>
+          <template v-else>
+            <!-- <textarea
             contenteditable
-            :id="'blockId' + blockObject.id"
-            @input="updateBlock(blockObject.id, $event.target.innerText)"
-          >
-            {{ blockObject.content }}
-          </h1>
-        </template>
-        <template v-else-if="blockObject.type == 'h2'">
-          <h2
-            contenteditable
-            :id="'blockId' + blockObject.id"
-            @input="updateBlock(blockObject.id, $event.target.innerText)"
-          >
-            {{ blockObject.content }}
-          </h2>
-        </template>
-        <template v-else-if="blockObject.type == 'h3'">
-          <h3
-            contenteditable
-            :id="'blockId' + blockObject.id"
-            @input="updateBlock(blockObject.id, $event.target.innerText)"
-          >
-            {{ blockObject.content }}
-          </h3>
-        </template>
-        <template v-else-if="blockObject.type == 'h4'">
-          <h4
-            contenteditable
-            :id="'blockId' + blockObject.id"
-            @input="updateBlock(blockObject.id, $event.target.innerText)"
-          >
-            {{ blockObject.content }}
-          </h4>
-        </template>
-        <template v-else>
-          <!-- <textarea
-            contenteditable
-            @input="updateBlock(blockObject.id, $event.target.innerText)"
+            @input="updateBlock(element.id, $event.target.innerText)"
             @keyup.enter="addBlock($event)"
-            v-text="blockObject.content"
+            v-text="element.content"
           > -->
-          <textarea
-            contenteditable
-            @keyup.enter="sliceBlock(blockObject.id, $event)"
-            @keyup="changeTextareaHeight(this)"
-            v-text="blockObject.content"
-          >
-          </textarea>
-        </template>
-      </section>
-    </template>
+            <textarea
+              contenteditable
+              draggable
+              @keyup.enter="sliceBlock(element.id, $event)"
+              @keyup="changeTextareaHeight(this)"
+              v-text="element.content"
+            >
+            </textarea>
+          </template>
+        </section>
+      </template>
+    </draggable>
+    <!-- </template> -->
   </article>
 </template>
 
 <script>
+import draggable from "vuedraggable";
 export default {
   name: "BlockEditor",
+  computed: {
+    dataArray: {
+      get() {
+        return this.$store.state.file;
+      },
+      set(value) {
+        this.$store.commit("updateFileArray", value);
+      },
+    },
+  },
   methods: {
     updateBlock(id, text) {
       const commitObject = {
@@ -101,11 +126,13 @@ export default {
         },
       });
     },
-  },
+  } /*
   props: {
     dataArray: Array,
+  },*/,
+  components: {
+    draggable,
   },
-  components: {},
 };
 </script>
 

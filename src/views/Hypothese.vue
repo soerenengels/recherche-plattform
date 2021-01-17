@@ -85,8 +85,8 @@ export default {
 textarea {
   background: #fff4c9;
   border-radius: 2rem;
-  width: calc(100% - 3em);
-  height: calc(100% - 3em);
+  width: calc(100% - 3rem);
+  min-height: 6em;
   padding: 1.5rem;
   font-size: 2rem;
   border: none;

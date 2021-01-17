@@ -22,7 +22,7 @@
               {{ source.description }}
             </template>
           </section>
-          <Button type="primary">Toggle Markdown-Editor</Button>
+          <!-- <Button type="primary">Toggle Markdown-Editor</Button> -->
         </div>
       </template>
     </LayoutTwoThirds>
@@ -34,7 +34,7 @@ import Navigation from "@/components/Navigation.vue";
 import LayoutTwoThirds from "@/components/LayoutTwoThirds.vue";
 import BlockEditor from "@/components/BlockEditor.vue";
 import BlockToC from "@/components/BlockToC.vue";
-import Button from "@/components/Button.vue";
+/* import Button from "@/components/Button.vue"; */
 import Event from "@/components/Event.vue";
 
 export default {
@@ -56,7 +56,7 @@ export default {
     LayoutTwoThirds,
     BlockEditor,
     BlockToC,
-    Button,
+    /* Button, */
     Event,
   },
 };

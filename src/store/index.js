@@ -226,6 +226,9 @@ export default createStore({
       const hypothesisId = 0;
       state.events[hypothesisId].content = value;
     },
+    updateFileArray(state, value) {
+      state.file = value
+    },
     updateBlockinFile(state, payload) {
       state.file[payload.id].content = payload.text;
       console.log(payload.id, payload.text)

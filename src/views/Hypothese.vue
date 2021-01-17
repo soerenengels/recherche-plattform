@@ -42,7 +42,7 @@ export default {
           id: 2,
           title: "Was ist eine Hypothese?",
           html:
-            "<p>Der Begriff der Hypothese entstammt dem Drehbuch der Recherche. Es geht darum, .... Hast du bereits eine konkrete Idee oder soll dir mit Fragen auf die Sprünge geholfen werden?</p>",
+            "<p>Der Begriff der Hypothese entstammt dem Drehbuch der Recherche. Sie ist die potentielle Antwort auf die Kernfrage deiner Recherche. Hast du bereits eine konkrete Idee oder soll dir mit Fragen auf die Sprünge geholfen werden?</p>",
         },
         {
           id: 3,
@@ -55,6 +55,12 @@ export default {
           title: "Wie geht es weiter?",
           html:
             "<p>Wenn du eine Hypothese aufgeschrieben hast, ist der nächste Schritt, dir Ereignisse zu überlegen, die aus der Hypothese folgen und deren Ursachen sind. Klicke auf <em>Chronik</em> in der Navigation.</p>",
+        },
+        {
+          id: 5,
+          title: "Beachte!",
+          html:
+            "<p>Es geht nicht darum, deine Hypothese zu beweisen. Vielmehr sollte dein Ziel sein sie zu prüfen. Suche dir daher in regelmäßigen Abständen kritische Stimmen, denen du vertraust. Fördere Kritik!</p>",
         },
       ],
     };

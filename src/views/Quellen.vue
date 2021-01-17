@@ -46,19 +46,20 @@ export default {
         {
           id: 2,
           title: "Öffentliche Dokumente",
-          html: "<p>Viele Quellen sind über das Internet verfügbar.</p>",
+          html:
+            "<p>Zu fast jedem Ereignis gibt es eine öffentliche Quelle. Viele davon sind über das Internet verfügbar. Denke an: Webseiten,Artikel, Presseberichte, Bücher, Forschungsarbeiten, Jahresberichte, Inspektionsberichte, Rechtsakten, Handelsregister- oder Grundbuchauszüge, Gerichtsberichte und -urteile, Ausschreibungen, Genehmigungen, Patente, Statistiken und Datenbanken.</p>",
         },
         {
           id: 3,
           title: "Beobachtungen",
           html:
-            "<p>Welche Orte sind relevant für das Ereignis? Welche für die Geschichte wesentliche Orte lassen sich besuchen? Treffe eine Auswahl.</p>",
+            "<p>Welche Orte sind relevant für das Ereignis? Welche für die Geschichte wesentliche Orte lassen sich besuchen? Treffe eine Auswahl. Ereignisse, die (anhand von Beobachtungen) beschrieben werden sollten, sind dramatische Ereignisse. Sie beinhalten Konflikte und Spannung.</p>",
         },
         {
           id: 4,
           title: "Interviews",
           html:
-            "<p>Welche Interviewpartner:innen können und wollen aussagen?</p>",
+            "<p>Im Prinzip sind alle Akteure (Täter, Betroffene, Zeugen) in der Chronik potentielle Interviewpartner:innen. Welche Interviewpartner:innen können und wollen aussagen?</p>",
         },
         {
           id: 5,

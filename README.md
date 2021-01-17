@@ -14,21 +14,31 @@ Möglich durch Vue.js. Danke. [de]
 
 ## To Do
 
+### Tables
+
 - Thema: Funktion für das Hinzufügen eines neuen Artikels
 - Thema: Tabellenzellen mehr Funktionen entsprechend Kontext geben(z.B. bei URL)
 - Quellen: Tabelle stylen
 - Quellen: Tabelle responsive machen
 - Kontakte: Social Media richtig anzeigen
 
-- File/BlockEditor: Textarea-Höhe anpassen
+### Stability & Collaboration
+
 - state stabil lokal oder in Datenbank speichern (https://www.mikestreety.co.uk/blog/vue-js-using-localstorage-with-the-vuex-store)
 - [Native-File-API](https://web.dev/file-system-access/) benutzen, um in regelmäßigen Abständen state als lokale Datei zu speichern
 - "Unsaved"-Indikator in rechter oberer Ecke (Desktop)
 
+### File-Editor
+
+- File/BlockEditor: Textarea-Höhe anpassen
 - File: Toggle-Button löschen
 - File: Make Blocks draggable (Cursor: https://developer.mozilla.org/de/docs/Web/CSS/cursor)
 
+### Navigation UX
+
 - Menü: Aktiven Link bei kleinen Bildschirmen in Viewport scrollen
+
+### Accessibility & Internationalization
 
 - A11y needs to be reviewed and improved
 - Translation needs to be completed and improved

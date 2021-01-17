@@ -1,18 +1,15 @@
 # re:form
 
-— A platform for investigative research by journalists [en]
-
+— A platform for investigative research by journalists [en]  
 — Eine Rechercheplattform für (investigative) Journalist:innen [de]
 
-**re:form** is baseod on the approach of _story-based inquireries_ by Mark Lee Hunter and Luuk Sengers. [en]
-
+**re:form** is based on the approach of _story-based inquireries_ by Mark Lee Hunter and Luuk Sengers. [en]  
 Die Rechercheplattform **re:form** basiert auf dem Ansatz der _story-based inquireries_ von Mark Lee Hunter und Luuk Sengers. [de]
 
-Amount of nights spent with this side-project: 6 [en]
-
+Amount of nights spent with this side-project: 6 [en]  
 Anzahl der mit diesem Nebenprojekt verbrachte Nächte: 6 [de]
 
-Possible through the use of Vue.js. Thanks. [en]
+Possible through the use of Vue.js. Thanks. [en]  
 Möglich durch Vue.js. Danke. [de]
 
 ## To Do

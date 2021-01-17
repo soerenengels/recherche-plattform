@@ -30,55 +30,50 @@ export default {
       tutorialData: [
         {
           id: 1,
-          title: "Die Chronik",
-          html:
-            "<p>Liste <strong>Ereignisse</strong> auf. Was ist das Problem (Hypothese)? Was sind die Folgen? Was ist/sind die Ursache/n? Wie könnten Lösungen aussehen?</p>",
+          title: this.$t("chronicle-screen.tutorial.screen-one.title"),
+          html: this.$t("chronicle-screen.tutorial.screen-one.html"),
         },
         {
           id: 2,
-          title: "Die Hypothese",
-          html:
-            "<p>Die folgenden Fragen helfen dabei, eine möglichst vollständige Chronik zu erstellen. Wir beginnen mit der Hypothese: Wer ist der Täter (Protagonist)? Wie benachteiligt oder schadet er anderen (Antagonist)?</p>",
+          title: this.$t("chronicle-screen.tutorial.screen-two.title"),
+          html: this.$t("chronicle-screen.tutorial.screen-two.html"),
         },
         {
           id: 3,
-          title: "Die Folgen",
-          html:
-            "<p>Dann versuchen wir uns vorzustellen, was die Folgen sein könnten: Inwiefern profitiert der Täter? Bekommt er Geld, Einfluss, etc.? Wie reagieren die Betroffenen auf die Nachteile? Fangen sie Streit an, suchen sie Hilfe, fordern sie Entschädigung, flüchten sie vor dem Problem, etc.? Wie reagieren Zeugen? Bieten sie Hilfe an oder gehen sie dem Problem nach?</p>",
+          title: this.$t("chronicle-screen.tutorial.screen-three.title"),
+          html: this.$t("chronicle-screen.tutorial.screen-three.html"),
         },
         {
           id: 4,
-          title: "Die Ursachen",
-          html:
-            "<p>Nun fragen wir uns, wie es so weit kommen konnte. Was sind die Ursachen? Wie kam der Täter auf die Idee? Reagiert er auf eine Bedrohung, Hindernis, Eingebung, Erfindung, Entdeckung, Gesetz, Auftrag, etc.? Wie bereitete sich der Täter vor? Wie kam er an die notwendigen Instrumente, Grundstoffe, finanziellen Mittel, Kenntnisse, Abnehmer, Zugänge, etc.? Wie kam der Täter zu der Gelegenheit? Wie kam er in die Position? Wer hat ihn bewacht oder weggeschaut?</p>",
+          title: this.$t("chronicle-screen.tutorial.screen-four.title"),
+          html: this.$t("chronicle-screen.tutorial.screen-four.html"),
         },
         {
           id: 5,
-          title: "Lösungen",
-          html:
-            "<p>Zum Schluss können wir noch versuchen, uns ein Bild von den Lösungen zu machen: Wie versuchen der Täter, die Betroffenen und Zeugen das Problem zu lösen oder dem Problem vorzubeugen? Welche Alternativen, Ausnahmen, Experimente, Pläne, Ideen, Ratschläge, Proteste, kritischen Töne, Reaktionen, etc. gibt es?</p>",
+          title: this.$t("chronicle-screen.tutorial.screen-five.title"),
+          html: this.$t("chronicle-screen.tutorial.screen-five.html"),
         },
       ],
       timelineSections: [
         {
-          title: "Problem",
+          title: this.$t("chronicle-screen.timeline.section-one.title"),
           type: "prob",
-          buttonText: "Problem ergänzen",
+          buttonText: this.$t("chronicle-screen.timeline.section-one.button"),
         },
         {
-          title: "Folgen",
+          title: this.$t("chronicle-screen.timeline.section-two.title"),
           type: "cons",
-          buttonText: "Folge hinzufügen",
+          buttonText: this.$t("chronicle-screen.timeline.section-two.button"),
         },
         {
-          title: "Ursachen",
+          title: this.$t("chronicle-screen.timeline.section-three.title"),
           type: "reas",
-          buttonText: "Ursache ergänzen",
+          buttonText: this.$t("chronicle-screen.timeline.section-three.button"),
         },
         {
-          title: "Lösungen",
+          title: this.$t("chronicle-screen.timeline.section-four.title"),
           type: "solu",
-          buttonText: "Lösung hinzufügen",
+          buttonText: this.$t("chronicle-screen.timeline.section-four.button"),
         },
       ],
     };

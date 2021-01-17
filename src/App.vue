@@ -32,13 +32,15 @@ body {
   }
 }
 
-p,
-a {
+p {
   font-size: 2em;
 }
 
+p > a {
+  text-decoration: underline 2px solid black;
+}
+
 a {
-  text-decoration: none;
   border: none;
   color: black;
 }

@@ -23,7 +23,7 @@
 export default {
   data() {
     return {
-      title: "Inhaltsverzeichnis",
+      title: this.$t("BlockToC.title"),
     };
   },
   computed: {

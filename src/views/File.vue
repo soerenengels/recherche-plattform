@@ -9,13 +9,13 @@
         <div class="sidebar">
           <BlockToC />
           <section>
-            <h2>Ereignisse</h2>
+            <h2>{{ $t("file-screen.aside.events") }}</h2>
             <template v-for="event in dataEvents" :key="event.id">
               <Event darkBackground closed :eventObject="event" />
             </template>
           </section>
           <section>
-            <h2>Quellen</h2>
+            <h2>{{ $t("file-screen.aside.sources") }}</h2>
             <template v-for="source in dataSources" :key="source.id">
               <!--<Event lightBackground closed :eventObject="source" />-->
               <!-- Add Source-Card -->

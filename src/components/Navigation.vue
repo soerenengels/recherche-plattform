@@ -20,36 +20,36 @@ export default {
     navigation() {
       return [
         {
-          text: "Hypothese",
+          text: this.$t("Navigation.hypothesis"),
           link: "/hypothese",
         },
         {
-          text: "Chronik",
+          text: this.$t("Navigation.chronicles"),
           link: "/chronik",
         },
         {
-          text: "Quellen",
+          text: this.$t("Navigation.sources"),
           link: "/quellen",
         },
         {
-          text: "File",
+          text: this.$t("Navigation.file"),
           link: "/file",
         },
         {
-          text: "Thema",
+          text: this.$t("Navigation.topic"),
           link: "/thema",
           push: true,
         },
         {
-          text: "Marketing",
+          text: this.$t("Navigation.marketing"),
           link: "/marketing",
         },
         {
-          text: "Kalendar",
+          text: this.$t("Navigation.calendar"),
           link: "/kalendar",
         },
         {
-          text: "Kontakte",
+          text: this.$t("Navigation.contacts"),
           link: "/kontakte",
         },
       ];
@@ -81,6 +81,7 @@ a {
   font-size: 2em;
   font-weight: 400;
   padding: 0;
+  text-decoration: none;
 }
 
 .router-link-active {

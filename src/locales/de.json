@@ -1,0 +1,97 @@
+{
+  "BlockToC": {
+    "title": "Inhaltsverzeichnis"
+  },
+  "Navigation": {
+    "hypothesis": "Hypothese",
+    "chronicles": "Chronik",
+    "sources": "Quellen",
+    "file": "File",
+    "topic": "Thema",
+    "marketing": "Marketing",
+    "calendar": "Kalendar",
+    "contacts": "Kontakte"
+  },
+  "home-screen": {
+    "title": "Recherche-Plattform",
+    "greeting": "Hallo User:in!",
+    "message": "Die vorliegende Recherche-Plattform ist <a href='https://github.com/soerenengels/recherche-plattform'>Work in Progress</a>. Sie basiert auf dem Ansatz der Story-based Inquiry Mark Lee Hunter und Luuk Sengers.",
+    "start-research": "Starte eine neue Story."
+  },
+  "hypothesis-screen": {
+    "title": "Was soll aufgedeckt werden?",
+    "text-area": "Hypothese",
+    "tutorial": {
+      "screen-one": {
+        "title": "Tutorial",
+        "html": "<p>Willkommen auf dem Entwurf einer Recherche-Plattform nach dem Vorbild des <em>Drehbuchs der Recherche</em>.</p><p>Zu Beginn steht die Frage, was du denn eigentlich aufdecken möchtest. Dafür gilt es zunächst einmal eine Hypothese zu formulieren, die dein weiteres Vorgehen leiten wird.</p>"
+      },
+      "screen-two": {
+        "title": "Was ist eine Hypothese?",
+        "html": "<p>Der Begriff der Hypothese entstammt dem Drehbuch der Recherche. Sie ist die potentielle Antwort auf die Kernfrage deiner Recherche. Hast du bereits eine konkrete Idee oder soll dir mit Fragen auf die Sprünge geholfen werden?</p>"
+      },
+      "screen-three": {
+        "title": "Wie finde ich eine Hypothese?",
+        "html": "<p><em>Stimmt es, dass …? Wie kann das sein? Was sind die Folgen? Was wird dagegen getan?</em></p>"
+      },
+      "screen-four": {
+        "title": "Wie geht es weiter?",
+        "html": "<p>Wenn du eine Hypothese aufgeschrieben hast, ist der nächste Schritt, dir Ereignisse zu überlegen, die aus der Hypothese folgen und deren Ursachen sind. Klicke auf <em>Chronik</em> in der Navigation.</p>"
+      },
+      "screen-five": {
+        "title": "Beachte!",
+        "html": "<p>Es geht nicht darum, deine Hypothese zu beweisen. Vielmehr sollte dein Ziel sein sie zu prüfen. Suche dir daher in regelmäßigen Abständen kritische Stimmen, denen du vertraust. Fördere Kritik!</p>"
+      }
+    }
+  },
+  "chronicle-screen": {
+    "title": "",
+    "tutorial": {
+      "screen-one": {
+        "title": "Die Chronik",
+        "html": "<p>Liste <strong>Ereignisse</strong> auf. Was ist das Problem (Hypothese)? Was sind die Folgen? Was ist/sind die Ursache/n? Wie könnten Lösungen aussehen?</p>"
+      },
+      "screen-two": {
+        "title": "Die Hypothese",
+        "html": "<p>Die folgenden Fragen helfen dabei, eine möglichst vollständige Chronik zu erstellen. Wir beginnen mit der Hypothese: Wer ist der Täter (Protagonist)? Wie benachteiligt oder schadet er anderen (Antagonist)?</p>"
+      },
+      "screen-three": {
+        "title": "Die Folgen",
+        "html": "<p>Dann versuchen wir uns vorzustellen, was die Folgen sein könnten: Inwiefern profitiert der Täter? Bekommt er Geld, Einfluss, etc.? Wie reagieren die Betroffenen auf die Nachteile? Fangen sie Streit an, suchen sie Hilfe, fordern sie Entschädigung, flüchten sie vor dem Problem, etc.? Wie reagieren Zeugen? Bieten sie Hilfe an oder gehen sie dem Problem nach?</p>"
+      },
+      "screen-four": {
+        "title": "Die Ursachen",
+        "html": "<p>Nun fragen wir uns, wie es so weit kommen konnte. Was sind die Ursachen? Wie kam der Täter auf die Idee? Reagiert er auf eine Bedrohung, Hindernis, Eingebung, Erfindung, Entdeckung, Gesetz, Auftrag, etc.? Wie bereitete sich der Täter vor? Wie kam er an die notwendigen Instrumente, Grundstoffe, finanziellen Mittel, Kenntnisse, Abnehmer, Zugänge, etc.? Wie kam der Täter zu der Gelegenheit? Wie kam er in die Position? Wer hat ihn bewacht oder weggeschaut?</p>"
+      },
+      "screen-five": {
+        "title": "Lösungen",
+        "html": "<p>Zum Schluss können wir noch versuchen, uns ein Bild von den Lösungen zu machen: Wie versuchen der Täter, die Betroffenen und Zeugen das Problem zu lösen oder dem Problem vorzubeugen? Welche Alternativen, Ausnahmen, Experimente, Pläne, Ideen, Ratschläge, Proteste, kritischen Töne, Reaktionen, etc. gibt es?</p>"
+      }
+    },
+    "timeline": {
+      "section-one": {
+        "title": "Problem",
+        "button": "@:chronicle-screen.timeline.title ergänzen"
+      },
+      "section-two": {
+        "title": "Folgen",
+        "button": "Folge ergänzen"
+      },
+      "section-three": {
+        "title": "Ursachen",
+        "button": "Ursache ergänzen"
+      },
+      "section-four": {
+        "title": "Lösungen",
+        "button": "Lösung ergänzen"
+      }
+    }
+  },
+  "sources-screen": {},
+  "file-screen": {
+    "aside": {
+      "events": "Ereignisse",
+      "sources": "Quellen"
+    }
+  }
+}

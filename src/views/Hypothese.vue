@@ -1,7 +1,7 @@
 <template>
   <Navigation />
   <main>
-    <Title>Was soll aufgedeckt werden?</Title>
+    <Title>{{ $t("hypothesis-screen.title") }}</Title>
     <LayoutTwoThirds>
       <template v-slot:main>
         <textarea
@@ -34,33 +34,28 @@ export default {
       tutorialData: [
         {
           id: 1,
-          title: "Tutorial",
-          html:
-            "<p>Willkommen auf dem Entwurf einer Recherche-Plattform nach dem Vorbild des <em>Drehbuchs der Recherche</em>.</p><p>Zu Beginn steht die Frage, was du denn eigentlich aufdecken möchtest. Dafür gilt es zunächst einmal eine Hypothese zu formulieren, die dein weiteres Vorgehen leiten wird.</p>",
+          title: this.$t("hypothesis-screen.tutorial.screen-one.title"),
+          html: this.$t("hypothesis-screen.tutorial.screen-one.html"),
         },
         {
           id: 2,
-          title: "Was ist eine Hypothese?",
-          html:
-            "<p>Der Begriff der Hypothese entstammt dem Drehbuch der Recherche. Sie ist die potentielle Antwort auf die Kernfrage deiner Recherche. Hast du bereits eine konkrete Idee oder soll dir mit Fragen auf die Sprünge geholfen werden?</p>",
+          title: this.$t("hypothesis-screen.tutorial.screen-two.title"),
+          html: this.$t("hypothesis-screen.tutorial.screen-two.html"),
         },
         {
           id: 3,
-          title: "Wie finde ich eine Hypothese?",
-          html:
-            "<p><em>Stimmt es, dass …? Wie kann das sein? Was sind die Folgen? Was wird dagegen getan?</em></p>",
+          title: this.$t("hypothesis-screen.tutorial.screen-three.title"),
+          html: this.$t("hypothesis-screen.tutorial.screen-three.html"),
         },
         {
           id: 4,
-          title: "Wie geht es weiter?",
-          html:
-            "<p>Wenn du eine Hypothese aufgeschrieben hast, ist der nächste Schritt, dir Ereignisse zu überlegen, die aus der Hypothese folgen und deren Ursachen sind. Klicke auf <em>Chronik</em> in der Navigation.</p>",
+          title: this.$t("hypothesis-screen.tutorial.screen-four.title"),
+          html: this.$t("hypothesis-screen.tutorial.screen-four.html"),
         },
         {
           id: 5,
-          title: "Beachte!",
-          html:
-            "<p>Es geht nicht darum, deine Hypothese zu beweisen. Vielmehr sollte dein Ziel sein sie zu prüfen. Suche dir daher in regelmäßigen Abständen kritische Stimmen, denen du vertraust. Fördere Kritik!</p>",
+          title: this.$t("hypothesis-screen.tutorial.screen-five.title"),
+          html: this.$t("hypothesis-screen.tutorial.screen-five.html"),
         },
       ],
     };

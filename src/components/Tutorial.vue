@@ -66,4 +66,10 @@ footer span {
 footer span:hover {
   background: rgba(255, 255, 255, 0.4);
 }
+
+@media screen and (max-width: 800px) {
+  .tutorial {
+    font-size: 0.75rem !important;
+  }
+}
 </style>

@@ -1,10 +1,16 @@
 # re:form
 
-— Eine Rechercheplattform für (investigative) Journalist:innen
+— A platform for investigative research by journalists [en]
+— Eine Rechercheplattform für (investigative) Journalist:innen [de]
 
-Die Rechercheplattform **re:form** basiert auf dem Ansatz der _story-based inquireries_ von Mark Lee Hunter und Luuk Sengers.
+**re:form** is baseod on the approach of _story-based inquireries_ by Mark Lee Hunter and Luuk Sengers. [en]
+Die Rechercheplattform **re:form** basiert auf dem Ansatz der _story-based inquireries_ von Mark Lee Hunter und Luuk Sengers. [de]
 
-Anzahl der mit diesem Nebenprojekt verbrachte Nächte: 5
+Amount of nights spent with this side-project: 6 [en]
+Anzahl der mit diesem Nebenprojekt verbrachte Nächte: 6 [de]
+
+Possible through the use of Vue.js. Thanks. [en]
+Möglich durch Vue.js. Danke. [de]
 
 ## To Do
 
@@ -12,23 +18,26 @@ Anzahl der mit diesem Nebenprojekt verbrachte Nächte: 5
 - Thema: Tabellenzellen mehr Funktionen entsprechend Kontext geben(z.B. bei URL)
 - Quellen: Tabelle stylen
 - Quellen: Tabelle responsive machen
+- Kontakte: Social Media richtig anzeigen
+
 - File/BlockEditor: Textarea-Höhe anpassen
 - state stabil lokal oder in Datenbank speichern (https://www.mikestreety.co.uk/blog/vue-js-using-localstorage-with-the-vuex-store)
-- Kontakte: Social Media richtig anzeigen
+- [Native-File-API](https://web.dev/file-system-access/) benutzen, um in regelmäßigen Abständen state als lokale Datei zu speichern
+- "Unsaved"-Indikator in rechter oberer Ecke (Desktop)
+
 - File: Toggle-Button löschen
 - File: Make Blocks draggable (Cursor: https://developer.mozilla.org/de/docs/Web/CSS/cursor)
+
 - Menü: Aktiven Link bei kleinen Bildschirmen in Viewport scrollen
-- "Unsaved"-Indikator in rechter oberer Ecke (Desktop)
-- [Native-File-API](https://web.dev/file-system-access/) benutzen, um in regelmäßigen Abständen state als lokale Datei zu speichern
-- Möglichkeit geben, eine Recherche aus einer lokalen Datei zu laden
-- a11y
 
-### in ferner Zukunft
+- A11y needs to be reviewed and improved
+- Translation needs to be completed and improved
 
-- File: Zum Markdown-Editor machen
-- Kollaboratives bearbeiten ermöglichen
-- i18n
-- Transkriptions-API einbinden
+### in future
+
+- improve File-View to be a fully functional (block/markdown) editor
+- enable collaborative work through saving/loading the state as local file in/from the cloud
+- maybe integrate a transkription-api
 
 ## Chronik
 

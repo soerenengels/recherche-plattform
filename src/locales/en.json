@@ -1,0 +1,97 @@
+{
+    "BlockToC": {
+        "title": "Table of Contents"
+    },
+    "Navigation": {
+        "hypothesis": "Hypothesis",
+        "chronicles": "Chronicles",
+        "sources": "Sources",
+        "file": "File",
+        "topic": "Topic",
+        "marketing": "Marketing",
+        "calendar": "Calendar",
+        "contacts": "Contacts"
+    },
+    "home-screen": {
+        "title": "Platform for Investigative Research",
+        "greeting": "Welcome!",
+        "message": "This is a research platform for journalists as <a href='https://github.com/soerenengels/recherche-plattform'>work in progress</a>. It is based on the approach of the Story-based Inquiry by Mark Lee Hunter and Luuk Sengers.",
+        "start-research": "Begin a new story."
+    },
+    "hypothesis-screen": {
+        "title": "What shall be revealed?",
+        "text-area": "Hypothesis",
+        "tutorial": {
+            "screen-one": {
+                "title": "Tutorial",
+                "html": "<p>Welcome to the draft of a platform for investigative research. It is build after the model of the <em>Story-based Inquiry</em>.</p><p>First of all you have to ask yourself: What do you want to reveal? Therefore you should come up with a hypothesis that will lead you through the further process.</p>"
+            },
+            "screen-two": {
+                "title": "What is a hypothesis?",
+                "html": "<p>Der Begriff der Hypothese entstammt dem Drehbuch der Recherche. Sie ist die potentielle Antwort auf die Kernfrage deiner Recherche. Hast du bereits eine konkrete Idee oder soll dir mit Fragen auf die Sprünge geholfen werden?</p>"
+            },
+            "screen-three": {
+                "title": "How do I find a hypothesis?",
+                "html": "<p><em>Stimmt es, dass …? Wie kann das sein? Was sind die Folgen? Was wird dagegen getan?</em></p>"
+            },
+            "screen-four": {
+                "title": "And now?",
+                "html": "<p>Wenn du eine Hypothese aufgeschrieben hast, ist der nächste Schritt, dir Ereignisse zu überlegen, die aus der Hypothese folgen und deren Ursachen sind. Klicke auf <em>Chronik</em> in der Navigation.</p>"
+            },
+            "screen-five": {
+                "title": "Stay woke!",
+                "html": "<p>Es geht nicht darum, deine Hypothese zu beweisen. Vielmehr sollte dein Ziel sein sie zu prüfen. Suche dir daher in regelmäßigen Abständen kritische Stimmen, denen du vertraust. Fördere Kritik!</p>"
+            }
+        }
+    },
+    "chronicle-screen": {
+        "title": "",
+        "tutorial": {
+            "screen-one": {
+                "title": "The Chronicles",
+                "html": "<p>List <strong>events</strong>. What is the problem (hypothesis)? What are the consequences? What is the cause or what are the causes? How could possible solutions look like?</p>"
+            },
+            "screen-two": {
+                "title": "The Hypothesis",
+                "html": "<p>Die folgenden Fragen helfen dabei, eine möglichst vollständige Chronik zu erstellen. Wir beginnen mit der Hypothese: Wer ist der Täter (Protagonist)? Wie benachteiligt oder schadet er anderen (Antagonist)?</p>"
+            },
+            "screen-three": {
+                "title": "The Consequences",
+                "html": "<p>Dann versuchen wir uns vorzustellen, was die Folgen sein könnten: Inwiefern profitiert der Täter? Bekommt er Geld, Einfluss, etc.? Wie reagieren die Betroffenen auf die Nachteile? Fangen sie Streit an, suchen sie Hilfe, fordern sie Entschädigung, flüchten sie vor dem Problem, etc.? Wie reagieren Zeugen? Bieten sie Hilfe an oder gehen sie dem Problem nach?</p>"
+            },
+            "screen-four": {
+                "title": "The Causes",
+                "html": "<p>Nun fragen wir uns, wie es so weit kommen konnte. Was sind die Ursachen? Wie kam der Täter auf die Idee? Reagiert er auf eine Bedrohung, Hindernis, Eingebung, Erfindung, Entdeckung, Gesetz, Auftrag, etc.? Wie bereitete sich der Täter vor? Wie kam er an die notwendigen Instrumente, Grundstoffe, finanziellen Mittel, Kenntnisse, Abnehmer, Zugänge, etc.? Wie kam der Täter zu der Gelegenheit? Wie kam er in die Position? Wer hat ihn bewacht oder weggeschaut?</p>"
+            },
+            "screen-five": {
+                "title": "Solutions",
+                "html": "<p>Zum Schluss können wir noch versuchen, uns ein Bild von den Lösungen zu machen: Wie versuchen der Täter, die Betroffenen und Zeugen das Problem zu lösen oder dem Problem vorzubeugen? Welche Alternativen, Ausnahmen, Experimente, Pläne, Ideen, Ratschläge, Proteste, kritischen Töne, Reaktionen, etc. gibt es?</p>"
+            }
+        },
+        "timeline": {
+            "section-one": {
+                "title": "Problem",
+                "button": "Add a problem"
+            },
+            "section-two": {
+                "title": "Causes",
+                "button": "Add a cause"
+            },
+            "section-three": {
+                "title": "Consequences",
+                "button": "Add a consequence"
+            },
+            "section-four": {
+                "title": "Solutions",
+                "button": "Add a solution"
+            }
+        }
+    },
+    "sources-screen": {},
+    "file-screen": {
+        "aside": {
+            "events": "Events",
+            "sources": "Sources"
+        }
+    }
+}

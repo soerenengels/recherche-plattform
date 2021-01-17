@@ -3,15 +3,16 @@
     <LayoutTwoThirds>
       <template #main>
         <header>
-          <Title>Recherche-Plattform</Title>
+          <Title>{{ $t("home-screen.title") }}</Title>
         </header>
         <p>
-          Hallo User:in!<br />Die vorliegende Recherche-Plattform ist
-          <a href="https://github.com/soerenengels/recherche-plattform"
-            >Work in Progress</a
-          >. Sie basiert auf dem Ansatz der Story-based Inquiry Mark Lee Hunter
-          und Luuk Sengers.<br />
-          <router-link to="/hypothese">Starte eine neue Story.</router-link>
+          {{ $t("home-screen.greeting") }}
+        </p>
+        <p v-html="$t('home-screen.message')"></p>
+        <p>
+          <router-link to="/hypothese">{{
+            $t("home-screen.start-research")
+          }}</router-link>
         </p>
       </template>
       <template #context>

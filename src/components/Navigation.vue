@@ -26,15 +26,15 @@ export default {
       return [
         {
           text: this.$t("Navigation.hypothesis"),
-          link: "/hypothese",
+          link: "/hypothesis",
         },
         {
           text: this.$t("Navigation.chronicles"),
-          link: "/chronik",
+          link: "/chronicles",
         },
         {
           text: this.$t("Navigation.sources"),
-          link: "/quellen",
+          link: "/sources",
         },
         {
           text: this.$t("Navigation.file"),
@@ -42,7 +42,7 @@ export default {
         },
         {
           text: this.$t("Navigation.topic"),
-          link: "/thema",
+          link: "/topic",
           push: true,
         },
         /*{
@@ -51,11 +51,11 @@ export default {
         },*/
         {
           text: this.$t("Navigation.calendar"),
-          link: "/kalendar",
+          link: "/xalendar",
         },
         {
           text: this.$t("Navigation.contacts"),
-          link: "/kontakte",
+          link: "/contacts",
         },
         {
           text: "≡",

@@ -10,7 +10,7 @@
         </p>
         <p v-html="$t('home-screen.message')"></p>
         <p>
-          <router-link to="/hypothese">{{
+          <router-link to="/hypothesis">{{
             $t("home-screen.start-research")
           }}</router-link>
         </p>
@@ -19,7 +19,7 @@
         </p>
       </template>
       <template #context>
-        <router-link to="/hypothese" class="rarr">&rarr;</router-link>
+        <router-link to="/hypothesis" class="rarr">&rarr;</router-link>
       </template>
     </LayoutTwoThirds>
   </main>

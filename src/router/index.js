@@ -18,18 +18,18 @@ const routes = [
     component: Home
   },
   {
-    path: '/hypothese',
-    name: 'Hypothese',
+    path: '/hypothesis',
+    name: 'Hypothesis',
     component: Hypothese
   },
   {
-    path: '/chronik',
-    name: 'Chronik',
+    path: '/chronicles',
+    name: 'Chronicles',
     component: Chronik
   },
   {
-    path: '/quellen',
-    name: 'Quellen',
+    path: '/sources',
+    name: 'Sources',
     component: Quellen
   },
   {
@@ -38,8 +38,8 @@ const routes = [
     component: File
   },
   {
-    path: '/thema',
-    name: 'Thema',
+    path: '/topic',
+    name: 'Topic',
     component: Thema
   },
   {
@@ -48,13 +48,13 @@ const routes = [
     component: Marketing
   },
   {
-    path: '/kalendar',
-    name: 'Kalendar',
+    path: '/calendar',
+    name: 'Calendar',
     component: Kalendar
   },
   {
-    path: '/kontakte',
-    name: 'Kontakte',
+    path: '/contacts',
+    name: 'Contacts',
     component: Kontakte
   },
   {

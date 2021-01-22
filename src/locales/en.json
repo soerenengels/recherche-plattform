@@ -87,11 +87,48 @@
             }
         }
     },
-    "sources-screen": {},
+    "sources-screen": {
+        "header": "<p>For each event, think of a possible source.<br>→ <em>Get a Documents State of Mind.</em></p>",
+        "table": {
+            "events": "Events",
+            "publicDocuments": "Public Documents",
+            "observations": "Observations",
+            "interviews": "Interviews",
+            "confidentialSources": "Confidential Sources",
+            "button": "Add Source"
+        },
+        "tutorial": {
+            "screen-one": {
+                "title": "Explore Sources",
+                "html": "<p>For this step of investigative research you do not need to have found all sources already. Your aim is to get an overview of possible sources. Only in the second step the tapping of relevant sources is required.</p>"
+            },
+            "screen-two": {
+                "title": "Public Documents",
+                "html": "<p>Nearly every event has public sources. Many of them are available in the internet. Think of: websites, articles, press releases, books, papers, annual reports, inspection reports, legal acts, trade registries or land certificates, court reports, court decisions, vacancies, official permits, patents, statistics and databases.</p>"
+            },
+            "screen-three": {
+                "title": "Oberservations",
+                "html": "<p>Which places are relevant for the event? Which can be visited?Make a selection. Events, that should be described are dramatic events. They contain tensions and conflicts.</p>"
+            },
+            "screen-four": {
+                "title": "Interviews",
+                "html": "<p>...</p>"
+            },
+            "screen-five": {
+                "title": "Confidential Sources",
+                "html": "<p>Are there any alternatives for confidential sources (e.g. plans, Anträge, budgets, consultations, instructinos, contracts, receipts, account statements, correspondences, emails, calendars, protocols, attendance lists, diaries, internal databases, internal research, evaluations, questionnaires, complaints, photos, vides)<br>→ Estimate the necessary effort. Is it the only evidence or a specific detail?</p>"
+            }
+        }
+    },
     "file-screen": {
         "aside": {
             "events": "Events",
             "sources": "Sources"
+        }
+    },
+    "state": {
+        "initial": {
+            "hypothesis": "Formulate your research hypothesis."
         }
     }
 }

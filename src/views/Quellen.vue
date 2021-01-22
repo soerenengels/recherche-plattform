@@ -1,12 +1,7 @@
 <template>
   <Navigation />
   <main>
-    <header>
-      <p>
-        Überlege zu jedem Ereignis, welche Quellen es geben könnte.<br />
-        &#x2192; <em>Get a Documents State of Mind.</em>
-      </p>
-    </header>
+    <header v-html="header"></header>
     <LayoutTwoThirds>
       <template v-slot:main>
         <TabelleQuellen :structure="structure" :dataSrc="data" />
@@ -29,43 +24,45 @@ export default {
   name: "Quellen",
   data() {
     return {
+      header: this.$t("sources-screen.header"),
       structure: [
-        { value: "Ereignisse", type: "tag" },
-        { value: "Öffentliche Dokumente", type: "text" },
-        { value: "Beobachtungen", type: "text" },
-        { value: "Interviews", type: "text" },
-        { value: "Vertrauliche Dokumente", type: "text" },
+        { value: this.$t("sources-screen.table.events"), type: "tag" },
+        {
+          value: this.$t("sources-screen.table.publicDocuments"),
+          type: "text",
+        },
+        { value: this.$t("sources-screen.table.observations"), type: "text" },
+        { value: this.$t("sources-screen.table.interviews"), type: "text" },
+        {
+          value: this.$t("sources-screen.table.confidentialSources"),
+          type: "text",
+        },
       ],
       tutorialData: [
         {
           id: 1,
-          title: "Quellen erschließen",
-          html:
-            "<p>Bei diesem Schritt der investigativen Recherche musst du noch nicht alle Quellen ausrecherchiert haben. Ziel ist es, sich einen Überblick über mögliche Quellen zu verschaffen. Erst in einem zweiten Schritt ist dann die Erschließung zielführender Quellen gefragt.</p>",
+          title: this.$t("sources-screen.tutorial.screen-one.title"),
+          html: this.$t("sources-screen.tutorial.screen-one.html"),
         },
         {
           id: 2,
-          title: "Öffentliche Dokumente",
-          html:
-            "<p>Zu fast jedem Ereignis gibt es eine öffentliche Quelle. Viele davon sind über das Internet verfügbar. Denke an: Webseiten,Artikel, Presseberichte, Bücher, Forschungsarbeiten, Jahresberichte, Inspektionsberichte, Rechtsakten, Handelsregister- oder Grundbuchauszüge, Gerichtsberichte und -urteile, Ausschreibungen, Genehmigungen, Patente, Statistiken und Datenbanken.</p>",
+          title: this.$t("sources-screen.tutorial.screen-two.title"),
+          html: this.$t("sources-screen.tutorial.screen-two.html"),
         },
         {
           id: 3,
-          title: "Beobachtungen",
-          html:
-            "<p>Welche Orte sind relevant für das Ereignis? Welche für die Geschichte wesentliche Orte lassen sich besuchen? Treffe eine Auswahl. Ereignisse, die (anhand von Beobachtungen) beschrieben werden sollten, sind dramatische Ereignisse. Sie beinhalten Konflikte und Spannung.</p>",
+          title: this.$t("sources-screen.tutorial.screen-three.title"),
+          html: this.$t("sources-screen.tutorial.screen-three.html"),
         },
         {
           id: 4,
-          title: "Interviews",
-          html:
-            "<p>Im Prinzip sind alle Akteure (Täter, Betroffene, Zeugen) in der Chronik potentielle Interviewpartner:innen. Welche Interviewpartner:innen können und wollen aussagen?</p>",
+          title: this.$t("sources-screen.tutorial.screen-four.title"),
+          html: this.$t("sources-screen.tutorial.screen-four.html"),
         },
         {
           id: 5,
-          title: "Vertrauliche Dokumente",
-          html:
-            "<p>Welche Alternativen gibt es für die vertraulichen Dokumente? (z.B. Pläne, Anträge, Budgets, Beratungen, Instruktionen, Verträge, Quittungen, Kontoauszüge, Korrespondenzen, E-Mails, Kalender, Protokolle, Anwesenheitslisten, Tagebücher, interne Datenbanken, interne Forschungen, Evaluationen, Fragebögen, Beschwerden, Fotos, Videos) &rarr; Aufwand der Erschließung abwägen (einziges Beweisstück oder spezifisches Detail).</p>",
+          title: this.$t("sources-screen.tutorial.screen-five.title"),
+          html: this.$t("sources-screen.tutorial.screen-five.html"),
         },
       ],
     };

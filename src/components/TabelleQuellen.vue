@@ -23,7 +23,9 @@
               <Event darkBackground :eventObject="cell" />
             </td>
             <td v-else-if="cell == ''">
-              <Button type="secondary">Quelle eintragen</Button>
+              <Button type="secondary">{{
+                $t("sources-screen.table.button")
+              }}</Button>
             </td>
             <td v-else>{{ cell }}</td>
           </template>

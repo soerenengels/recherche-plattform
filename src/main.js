@@ -24,4 +24,4 @@ const i18n = createI18n({
     messages: loadLocaleMessages()
 })
 
-createApp(App).use(store).use(router).use(i18n).mount('#app')
+createApp(App).use(i18n).use(store).use(router).mount('#app')

@@ -7,12 +7,12 @@
 Die Rechercheplattform **re:form** basiert auf dem Ansatz der _story-based inquireries_ von Mark Lee Hunter und Luuk Sengers. [de]
 
 Amount of nights spent with this side-project: 6 [en]  
-Anzahl der mit diesem Nebenprojekt verbrachte Nächte: 6 [de]
+Anzahl der mit diesem Nebenprojekt verbrachte Nächte: 7 [de]
 
 Possible through the use of Vue.js. Thanks. [en]  
 Möglich durch Vue.js. Danke. [de]
 
-uses: vue-i18n, vuedraggable
+uses: vue-i18n@next, vuedraggable.next
 
 ## To Do
 
@@ -28,17 +28,16 @@ uses: vue-i18n, vuedraggable
 
 - state stabil lokal oder in Datenbank speichern (https://www.mikestreety.co.uk/blog/vue-js-using-localstorage-with-the-vuex-store)
 - [Native-File-API](https://web.dev/file-system-access/) benutzen, um in regelmäßigen Abständen state als lokale Datei zu speichern
-- "Unsaved"-Indikator in rechter oberer Ecke (Desktop)
+- SaveStatus: functionality + adjustments on smaller screens
 
 ### File-Editor
 
 - File/BlockEditor: Textarea-Höhe anpassen
-- File: Toggle-Button löschen
-- File: Make Blocks draggable (Cursor: https://developer.mozilla.org/de/docs/Web/CSS/cursor)
+- improve design of handles
 
 ### Navigation UX
 
-- Menü: Aktiven Link bei kleinen Bildschirmen in Viewport scrollen
+- decouple navigation from router-view, so that after a click the navigation stays stable
 
 ### Accessibility & Internationalization
 

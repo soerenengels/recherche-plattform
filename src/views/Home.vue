@@ -6,13 +6,16 @@
           <Title>{{ $t("home-screen.title") }}</Title>
         </header>
         <p>
-          {{ $t("home-screen.greeting") }}
+          <strong>{{ $t("home-screen.greeting") }}</strong>
         </p>
         <p v-html="$t('home-screen.message')"></p>
         <p>
           <router-link to="/hypothese">{{
             $t("home-screen.start-research")
           }}</router-link>
+        </p>
+        <p>
+          <button @click="loadFromFile()">Story laden</button>
         </p>
       </template>
       <template #context>
@@ -29,6 +32,16 @@ import LayoutTwoThirds from "@/components/LayoutTwoThirds.vue";
 
 export default {
   name: "Home",
+  methods: {
+    async loadFromFile() {
+      let fileHandle;
+      [fileHandle] = await window.showOpenFilePicker();
+      const file = await fileHandle.getFile();
+      const contents = await file.text();
+      // Now the Content must be commited to the Store as new State
+      this.$store.commit("loadFileAsState", contents);
+    },
+  },
   components: {
     Title,
     LayoutTwoThirds,

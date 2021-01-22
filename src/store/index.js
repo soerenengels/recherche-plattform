@@ -1,18 +1,15 @@
 import { createStore } from 'vuex'
 
 const initialState = {
-  story: {
-    id: 0,
-    title: "Erste Investigative Story",
-    hypothesis: "",
-    sources: [
-      {
-        id: 0,
-        description: "Test",
-        eventId: 0,
-        sourceType: "public",
-      },
-    ],
+  app: {
+    version: "0.0.1",
+    description: "Beschreibung.",
+    settings: {
+      locale: "en-US",
+      filehandle: true,
+      savedOn: false,
+      autosave: false
+    },
   },
   sources: [
     {
@@ -172,11 +169,19 @@ const initialState = {
     },
   ],
 }
+
 export default createStore({
   state: initialState,
   setters: {
   },
   getters: {
+    isSaved(state) {
+      return state.app.settings.filehandle;
+    },
+    isEqualToFile(state) {
+      /* Needs to be adjusted */
+      return state.app.settings.savedOn ? true : false;
+    },
     getEvents(state) {
       return state.events;
     },
@@ -226,6 +231,13 @@ export default createStore({
       const hypothesisId = 0;
       state.events[hypothesisId].content = value;
     },
+    loadFileAsState(state, payload) {
+      let fileHandle = payload.fileHandle;
+      let content = payload.contents;
+      let contentAsJson = JSON.parse(content);
+      Object.assign(state, contentAsJson);
+      state.app.settings.filehandle = fileHandle;
+    },
     updateFileArray(state, value) {
       state.file = value
     },
@@ -242,8 +254,23 @@ export default createStore({
     }
   },
   actions: {
-    createNewStory() {
-      this.state = initialState;
+    toggleAutosave({ state, dispatch }) {
+      if (!state.app.settings.autosave) {
+        dispatch('autosave');
+        state.app.settings.autosave = true;
+      } else {
+        /* deaktiviere Autosave */
+        clearInterval(this.autosave);
+        state.app.settings.autosave = false;
+      }
+    },
+    autosave(/* { dispatch } */) {
+
+      let autosave = setInterval(function () {
+        /* dispatch('saveState'); */
+        console.log("save");
+      }, 1500);
+      return autosave;
     },
     addItemToChronik({ commit }, eventObject) {
       console.log("Action dispatched for Event-Addition");
@@ -251,8 +278,23 @@ export default createStore({
         commit('addEvent', eventObject);
       }, 300)
 
+    },
+    async saveState({ state }) {
+      // IMPROVE by searching for the partials that changed
+      let filehandle = state.app.settings.filehandle;
+      const file = await filehandle.getFile();
+      const contents = await file.text();
+      const fileJson = JSON.parse(contents);
+      if (state != fileJson) {
+        // AND STATE IS NEWER THAN FILE
+        // SAVE STATE TO FILE
+        console.log("state needs to be saved to filehandle");
+        const writable = await filehandle.createWritable();
+        await writable.write(fileJson);
+        await writable.close();
+        console.log("done writing!");
+      }
+      // BE AWARE OF POSSIBLE CONFLICTS
     }
-  },
-  modules: {
   }
 })

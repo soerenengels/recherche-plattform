@@ -7,14 +7,19 @@
         </li>
       </template>
     </ul>
+    <SaveStatus />
   </nav>
 </template>
 
 <script>
+import SaveStatus from "@/components/SaveStatus.vue";
 export default {
   name: "Navigation",
   data() {
     return {};
+  },
+  components: {
+    SaveStatus,
   },
   computed: {
     navigation() {
@@ -52,6 +57,10 @@ export default {
           text: this.$t("Navigation.contacts"),
           link: "/kontakte",
         },
+        {
+          text: "≡",
+          link: "/settings",
+        },
       ];
     },
   },
@@ -63,15 +72,19 @@ nav {
   width: 100%;
   margin-bottom: 1.5rem;
   height: 3rem;
+  position: relative;
 }
 ul {
   display: flex;
-  overflow-y: scroll;
+  overflow-y: auto;
   height: 100%;
 }
 li {
   padding-right: 1em;
   list-style-type: none;
+}
+li:last-of-type {
+  padding-right: 0;
 }
 /* https://developer.mozilla.org/de/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container#using_auto_margins_for_main_axis_alignment */
 .push {

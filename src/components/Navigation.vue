@@ -45,10 +45,10 @@ export default {
           link: "/thema",
           push: true,
         },
-        {
+        /*{
           text: this.$t("Navigation.marketing"),
           link: "/marketing",
-        },
+        },*/
         {
           text: this.$t("Navigation.calendar"),
           link: "/kalendar",

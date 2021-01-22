@@ -49,6 +49,7 @@ uses: vue-i18n@next, vuedraggable.next
 - improve File-View to be a fully functional (block/markdown) editor
 - enable collaborative work through saving/loading the state as local file in/from the cloud
 - maybe integrate a transkription-api
+- Marketing-Page
 
 ## Chronik
 

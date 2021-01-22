@@ -8,6 +8,7 @@ import Thema from '../views/Thema.vue'
 import Marketing from '../views/Marketing.vue'
 import Kontakte from '../views/Kontakte.vue'
 import Kalendar from '../views/Kalendar.vue'
+import Settings from '../views/Settings.vue'
 import NewStory from '../views/NewStory.vue'
 
 const routes = [
@@ -55,6 +56,11 @@ const routes = [
     path: '/kontakte',
     name: 'Kontakte',
     component: Kontakte
+  },
+  {
+    path: '/settings',
+    name: 'Settings',
+    component: Settings
   },
   {
     path: '/new',

@@ -19,7 +19,7 @@
   .twoThirds > section {
     flex: 50% 2;
     padding-right: 2em;
-    overflow-x: scroll;
+    overflow-x: auto;
   }
   .twoThirds > aside {
     flex: 30% 1;

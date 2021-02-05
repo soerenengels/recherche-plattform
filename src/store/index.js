@@ -78,7 +78,7 @@ const initialState = {
       id: 1,
       type: "p",
       content: "In diesem Textfile kannst du die Geschichte zusammenschreiben. Auf der rechten Seite findest du neben einem Outline der Überschriften weitere Unterstützung, um schnell auf Informationen zuzugreifen. Mit einem Klick auf das Icon in der oberen rechten Ecke der jeweiligen Notiz, kannst du die Informationen auf- oder zuklappen."
-    },
+    },/*
     {
       id: 2,
       type: "p",
@@ -108,7 +108,7 @@ const initialState = {
       id: 7,
       type: "p",
       content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sit quasi soluta tempora, eligendi molestias, blanditiis quas incidunt voluptatem ipsum fugit hic impedit beatae accusamus nemo id perferendis quia deleniti."
-    },
+    },*/
   ],
   topicCollection: [
     {

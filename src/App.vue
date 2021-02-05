@@ -10,6 +10,7 @@
 html,
 body {
   background: #f6df81;
+  background-color: rgb(246, 223, 129);
   font-family: "forma-djr-display", "Helvetica Neue", "Avenir", "Helvetica",
     "Arial", sans-serif;
 }

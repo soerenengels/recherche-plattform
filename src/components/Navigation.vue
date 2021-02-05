@@ -51,7 +51,7 @@ export default {
         },*/
         {
           text: this.$t("Navigation.calendar"),
-          link: "/xalendar",
+          link: "/calendar",
         },
         {
           text: this.$t("Navigation.contacts"),

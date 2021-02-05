@@ -6,7 +6,7 @@
 **re:form** is based on the approach of _story-based inquireries_ by Mark Lee Hunter and Luuk Sengers. [en]  
 Die Rechercheplattform **re:form** basiert auf dem Ansatz der _story-based inquireries_ von Mark Lee Hunter und Luuk Sengers. [de]
 
-Amount of nights spent with this side-project: 6 [en]  
+Amount of nights spent with this side-project: 7 [en]  
 Anzahl der mit diesem Nebenprojekt verbrachte Nächte: 7 [de]
 
 Possible through the use of Vue.js. Thanks. [en]  
@@ -37,7 +37,7 @@ uses: vue-i18n@next, vuedraggable.next
 
 ### Navigation UX
 
-- decouple navigation from router-view, so that after a click the navigation stays stable
+- decouple navigation from router-view, so that after a click the navigation stays stable (or: https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView)
 
 ### Accessibility & Internationalization
 

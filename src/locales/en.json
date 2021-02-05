@@ -28,19 +28,19 @@
             },
             "screen-two": {
                 "title": "What is a hypothesis?",
-                "html": "<p>Der Begriff der Hypothese entstammt dem Drehbuch der Recherche. Sie ist die potentielle Antwort auf die Kernfrage deiner Recherche. Hast du bereits eine konkrete Idee oder soll dir mit Fragen auf die Sprünge geholfen werden?</p>"
+                "html": "<p>The term hypothesis originates from the <em>Story-based Inquiries</em>. It is the potential answer for the lead question of your research. Do you already have a concrete idea or would you like some support?</p>"
             },
             "screen-three": {
                 "title": "How do I find a hypothesis?",
-                "html": "<p><em>Stimmt es, dass …? Wie kann das sein? Was sind die Folgen? Was wird dagegen getan?</em></p>"
+                "html": "<p>Questions can help you to find your way to a hypothesis: <em>Is is true that ...? How can that be possible? What are the consequences? What is done for prevention?</em></p>"
             },
             "screen-four": {
                 "title": "And now?",
-                "html": "<p>Wenn du eine Hypothese aufgeschrieben hast, ist der nächste Schritt, dir Ereignisse zu überlegen, die aus der Hypothese folgen und deren Ursachen sind. Klicke auf <em>Chronik</em> in der Navigation.</p>"
+                "html": "<p>When you wrote down a hypothesis, the next step is to think of events that follow by the hypothesis and are its cause. Press <em>Chronicles</em> in the navigation.</p>"
             },
             "screen-five": {
                 "title": "Stay woke!",
-                "html": "<p>Es geht nicht darum, deine Hypothese zu beweisen. Vielmehr sollte dein Ziel sein sie zu prüfen. Suche dir daher in regelmäßigen Abständen kritische Stimmen, denen du vertraust. Fördere Kritik!</p>"
+                "html": "<p>It is not about proving your hypothesis. Rather your aim should be to examine it. Periodically consider critical voices who you trust. Promote critics!</p>"
             }
         }
     },
@@ -53,19 +53,19 @@
             },
             "screen-two": {
                 "title": "The Hypothesis",
-                "html": "<p>Die folgenden Fragen helfen dabei, eine möglichst vollständige Chronik zu erstellen. Wir beginnen mit der Hypothese: Wer ist der Täter (Protagonist)? Wie benachteiligt oder schadet er anderen (Antagonist)?</p>"
+                "html": "<p>The following questions shall help you to create an as complete chronicle as possible. We begin with the hypothesis: Who is the perpetrator (protagonist)? How does he affect or harm others (antagonist)?</p>"
             },
             "screen-three": {
                 "title": "The Consequences",
-                "html": "<p>Dann versuchen wir uns vorzustellen, was die Folgen sein könnten: Inwiefern profitiert der Täter? Bekommt er Geld, Einfluss, etc.? Wie reagieren die Betroffenen auf die Nachteile? Fangen sie Streit an, suchen sie Hilfe, fordern sie Entschädigung, flüchten sie vor dem Problem, etc.? Wie reagieren Zeugen? Bieten sie Hilfe an oder gehen sie dem Problem nach?</p>"
+                "html": "<p>Then, we try to come up with causes. In what way the perpetrator benefits? Does they get money, influence, power, etc.?How do the affected react on their disadvantage? Do they start an argument? Do they look for help? Do they claim compensation? Do they supress the problem? How do witnesses react? Do they offer help or do they investigate the problem?</p>"
             },
             "screen-four": {
                 "title": "The Causes",
-                "html": "<p>Nun fragen wir uns, wie es so weit kommen konnte. Was sind die Ursachen? Wie kam der Täter auf die Idee? Reagiert er auf eine Bedrohung, Hindernis, Eingebung, Erfindung, Entdeckung, Gesetz, Auftrag, etc.? Wie bereitete sich der Täter vor? Wie kam er an die notwendigen Instrumente, Grundstoffe, finanziellen Mittel, Kenntnisse, Abnehmer, Zugänge, etc.? Wie kam der Täter zu der Gelegenheit? Wie kam er in die Position? Wer hat ihn bewacht oder weggeschaut?</p>"
+                "html": "<p>Now we ask ourselves, how could it possibly come so far? What are the causes? How did the perpetrator come up with the idea? Does they react to a threat, obstacle, inspiration, invention, discovery, law, order, etc.? How did the perpetrator prepare? How did they get the necessary instruments, raw materials, financial resources, knowledge, customers, access, etc.? How did the perpetrator get the opportunity? How did they get into the position? Who was watching them or looking the other way?</p>"
             },
             "screen-five": {
                 "title": "Solutions",
-                "html": "<p>Zum Schluss können wir noch versuchen, uns ein Bild von den Lösungen zu machen: Wie versuchen der Täter, die Betroffenen und Zeugen das Problem zu lösen oder dem Problem vorzubeugen? Welche Alternativen, Ausnahmen, Experimente, Pläne, Ideen, Ratschläge, Proteste, kritischen Töne, Reaktionen, etc. gibt es?</p>"
+                "html": "<p>Finally, we try to get an idea of possible solutions. How do the perpetrator, the affected and the witnesses try to prevent or solve the problem? What are the alternatives, exceptions, experiments, plans, ideas, advices, protests, critical voices, reactions, etc.?</p>"
             }
         },
         "timeline": {

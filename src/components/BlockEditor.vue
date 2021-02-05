@@ -57,14 +57,25 @@
             @keyup.enter="addBlock($event)"
             v-text="element.content"
           > -->
-            <textarea
+            <!-- Funktional
+
+              <textarea
               contenteditable
               draggable
               @keyup.enter="sliceBlock(element.id, $event)"
-              @keyup="changeTextareaHeight(this)"
+              @keydown="changeTextareaHeight($event)"
+              @input="updateBlock(element.id, $event.target.innerText)"
               v-text="element.content"
+              style="height: 36px"
             >
-            </textarea>
+            </textarea> -->
+            <div
+              contenteditable
+              @keyup.enter="sliceBlock(element.id, $event)"
+              @keydown="changeTextareaHeight($event)"
+              @input="updateBlock(element.index, $event.target.innerText)"
+              v-text="element.content"
+            ></div>
           </template>
         </section>
       </template>
@@ -96,9 +107,10 @@ export default {
       };
       this.$store.commit(commitObject);
     },
-    changeTextareaHeight(el) {
-      el.style.height = "1px";
-      el.style.height = 25 + el.scrollHeight + "px";
+    changeTextareaHeight(e) {
+      const el = e.target;
+      el.style.removeProperty("height");
+      el.style.height = this.scrollHeight + 2 + "px";
     },
     sliceBlock(currentBlockId, e) {
       console.log("Someone pressed Enter!");
@@ -139,7 +151,7 @@ export default {
 <style scoped>
 .blockEditor h1 {
   font-size: 2em;
-  padding-bottom: 1rem;
+  /* padding-bottom: 1rem; */
 }
 .blockEditor h2 {
   font-size: 1.5em;
@@ -156,16 +168,34 @@ export default {
   font-size: inherit;
   width: 100%;
   overflow: hidden;
+  resize: none;
 }
 .block {
   display: flex;
   z-index: 20;
   align-items: flex-start;
+  transition: background-color 0.3s ease;
+  border-radius: 1em;
+  padding: 0.5em;
+}
+.block:hover,
+.block:focus-within {
+  background-color: hsl(48, 87%, 84%);
 }
 .block > * {
 }
 .blockHandle {
   font-size: 1.5rem;
   padding: 0 0.5rem;
+  transition: background-color 0.3s ease;
+  border-radius: 0.5em;
+  margin-right: 0.4em;
+}
+.blockHandle:hover {
+  cursor: grab;
+  background-color: hsl(48, 87%, 90%);
+}
+.blockHandle:active {
+  cursor: grabbing;
 }
 </style>

@@ -33,7 +33,8 @@ export default {
 /* Needs adjustment on smaller screens */
 .saveStatus {
   position: absolute;
-  color: rgba(0, 0, 0, 0.5);
+  /* color: rgba(0, 0, 0, 0.5); */
+  color: hsla(48, 87%, 25%, 0.8);
   font-size: 0.8em;
   top: -1rem;
   right: 0;
